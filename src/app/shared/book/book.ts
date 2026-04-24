@@ -8,6 +8,7 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { PageFlip } from 'page-flip';
 
 @Component({
   selector: 'app-book',
@@ -26,10 +27,9 @@ export class Book implements AfterViewInit, OnDestroy {
   private platformId = inject(PLATFORM_ID);
   private pf: any;
 
-  async ngAfterViewInit() {
+  ngAfterViewInit() {
     if (!isPlatformBrowser(this.platformId)) return;
 
-    const { PageFlip } = await import('page-flip');
     const el = this.bookEl.nativeElement;
 
     this.pf = new PageFlip(el, {
