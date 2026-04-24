@@ -1,0 +1,335 @@
+// ===== SECTION BASE =====
+// padding-left compensa el nav overlay (160px) + margen visual (60px)
+.section {
+  padding: 70px 60px 90px 220px;
+  position: relative;
+}
+
+// ===== MAG DIVIDER =====
+.mag-divider {
+  display: flex;
+  align-items: center;
+  padding: 4px 60px 4px 220px;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #e91e8c 40%, #ffde59 60%, transparent);
+  }
+
+  span {
+    font-size: 18px;
+    color: #e91e8c;
+    padding: 0 20px;
+    text-shadow: 1px 1px 0 #ffde59;
+    letter-spacing: 10px;
+  }
+}
+
+// ===== SECCIÓN 1: PORTADA =====
+.section--portada {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 52px;
+}
+
+.portada-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+}
+
+.portada-photo-wrap {
+  flex-shrink: 0;
+}
+
+.portada-perrito {
+  width: clamp(110px, 16vw, 210px);
+  display: block;
+  transform: rotate(-8deg);
+  filter:
+    drop-shadow(3px 5px 0 #e91e8c)
+    drop-shadow(5px 8px 0 #ffde59)
+    drop-shadow(6px 10px 12px rgba(0, 0, 0, 0.35));
+}
+
+.portada-masthead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.vitrina-title {
+  font-family: 'Roca One', 'Hammersmith One', sans-serif;
+  font-weight: 400;
+  font-size: clamp(80px, 16vw, 200px);
+  color: #ee46d3;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-shadow:
+    5px 5px 0 #ffde59,
+    8px 8px 0 #ffde59,
+    10px 10px 0 rgba(0, 0, 0, 0.15);
+  line-height: 0.88;
+  user-select: none;
+}
+
+.portada-tagline {
+  font-family: 'Contrail One', sans-serif;
+  font-size: clamp(12px, 1.6vw, 17px);
+  color: #ffde59;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #e91e8c;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.portada-intro-wrap {
+  max-width: 700px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(233, 30, 140, 0.5);
+  padding: 28px 36px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(255, 222, 89, 0.35);
+    pointer-events: none;
+  }
+}
+
+.portada-intro-text {
+  font-family: 'Contrail One', sans-serif;
+  font-size: clamp(15px, 1.8vw, 20px);
+  line-height: 1.75;
+  color: #ffffff;
+  text-align: center;
+  text-shadow:
+    1px 1px 0 #000000,
+    2px 2px 0 #000000;
+}
+
+// ===== CINTA DE SECCIÓN =====
+.nota-ribbon {
+  background: #e91e8c;
+  color: #ffde59;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: clamp(15px, 2.2vw, 22px);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 44px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 0 #ffde59, 7px 7px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    border-top: 9px solid #b0116a;
+  }
+
+  &::before {
+    left: 0;
+    border-left: 9px solid transparent;
+  }
+
+  &::after {
+    right: 0;
+    border-right: 9px solid transparent;
+  }
+}
+
+.nota-ribbon--yellow {
+  background: #ffde59;
+  color: #e91e8c;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 0 #e91e8c, 7px 7px 0 rgba(0, 0, 0, 0.2);
+
+  &::before,
+  &::after {
+    border-top-color: #c9ae00;
+  }
+}
+
+// ===== SECCIÓN 2: NOTA ESPECIAL =====
+.section--nota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+
+.nota-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nota-foto-wrap {
+  display: inline-block;
+  padding: 14px 14px 44px;
+  background: #ffffff;
+  box-shadow:
+    8px 8px 0 rgba(233, 30, 140, 0.45),
+    16px 16px 0 rgba(255, 222, 89, 0.45),
+    22px 22px 28px rgba(0, 0, 0, 0.3);
+  transform: rotate(-5deg);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow:
+      6px 6px 0 rgba(233, 30, 140, 0.45),
+      12px 12px 0 rgba(255, 222, 89, 0.45),
+      18px 18px 24px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.nota-foto {
+  display: block;
+  width: clamp(220px, 38vw, 460px);
+  height: auto;
+  object-fit: contain;
+}
+
+// ===== SECCIÓN 3: VIDEO =====
+.section--video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+
+.video-wrap {
+  width: 100%;
+  max-width: 760px;
+  border: 12px solid #ffffff;
+  box-shadow:
+    7px 7px 0 #e91e8c,
+    12px 12px 0 #ffde59,
+    18px 18px 24px rgba(0, 0, 0, 0.3);
+}
+
+.panel-yt {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: none;
+}
+
+// ===== SECCIÓN 4: ESPECTÁCULO =====
+.section--espectaculo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+  padding-bottom: 120px;
+}
+
+.espectaculo-wrap {
+  display: inline-block;
+  padding: 14px 14px 44px;
+  background: #ffffff;
+  box-shadow:
+    -8px 8px 0 rgba(233, 30, 140, 0.45),
+    -16px 16px 0 rgba(255, 222, 89, 0.45),
+    -22px 22px 28px rgba(0, 0, 0, 0.3);
+  transform: rotate(5deg);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow:
+      -6px 6px 0 rgba(233, 30, 140, 0.45),
+      -12px 12px 0 rgba(255, 222, 89, 0.45),
+      -18px 18px 24px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.espectaculo-img {
+  display: block;
+  width: clamp(220px, 38vw, 460px);
+  height: auto;
+  object-fit: contain;
+}
+
+// ===== RESPONSIVE =====
+
+// Tablet portrait (≤ 768px): nav pasa a 56px → compensar padding
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 32px 80px 80px; // 56px nav + 24px margen visual
+  }
+
+  .mag-divider {
+    padding: 4px 32px 4px 80px;
+  }
+
+  .portada-top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .section--espectaculo {
+    padding-bottom: 80px;
+  }
+
+  .portada-intro-wrap {
+    max-width: 100%;
+  }
+}
+
+// Mobile (≤ 480px): espacio mínimo
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 16px 64px 68px; // 56px nav + 12px margen
+  }
+
+  .mag-divider {
+    padding: 4px 16px 4px 68px;
+  }
+
+  .section--portada {
+    gap: 32px;
+    min-height: 70vh;
+  }
+
+  .section--nota,
+  .section--video,
+  .section--espectaculo {
+    gap: 32px;
+  }
+
+  .section--espectaculo {
+    padding-bottom: 60px;
+  }
+
+  .nota-foto,
+  .espectaculo-img {
+    width: clamp(160px, 72vw, 320px);
+  }
+
+  .video-wrap {
+    border-width: 8px;
+  }
+
+  .portada-top {
+    gap: 16px;
+  }
+}

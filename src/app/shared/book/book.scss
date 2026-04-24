@@ -1,0 +1,18 @@
+// El wrapper usa position: fixed + inset: 0 en vez de 100vh para:
+// 1. Cubrir el viewport exacto en todos los dispositivos (mobile, tablet, desktop)
+//    sin los bugs de 100vh con la barra del navegador en móvil.
+// 2. Crear un stacking context aislado (isolation: isolate) que contiene
+//    los elementos 3D del flip dentro del z-index del libro,
+//    evitando que se "escapen" sobre la nav-column durante la animación.
+.book-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.book-el {
+  width: 100%;
+  height: 100%;
+}

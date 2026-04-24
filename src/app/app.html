@@ -1,85 +1,44 @@
-<div class="page-wrapper">
+<div class="page-wrapper" [class.nodo-mode]="isNodo()">
 
-  <!-- Blobs decorativos aislados -->
+  <!-- Blobs decorativos fijos -->
   <div class="deco-overlay">
     <div class="deco deco-1"></div>
     <div class="deco deco-2"></div>
     <div class="deco deco-3"></div>
   </div>
 
-  <!-- Columna izquierda — menú hamburguesa -->
+  <!-- Columna izquierda — menú hamburguesa (fijo) -->
   <aside class="nav-column">
     <div class="nav-hamburger">
-      <button class="nav-btn" aria-label="Inicio">
+      <a class="nav-btn" routerLink="/" aria-label="Inicio" (click)="menuOpen = false">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 12L12 3L21 12V21H15V15H9V21H3V12Z" stroke="#e91e8c" stroke-width="2" stroke-linejoin="round"/>
         </svg>
-      </button>
+      </a>
       <button class="ham-btn" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Abrir menú">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <div class="ham-menu" [class.visible]="menuOpen">
-        <a class="ham-item" (click)="menuOpen = false">Nodo 1</a>
-        <a class="ham-item" (click)="menuOpen = false">Nodo 2</a>
-        <a class="ham-item" (click)="menuOpen = false">Nodo 3</a>
-        <a class="ham-item" (click)="menuOpen = false">Nodo 4</a>
+        <a class="ham-item" routerLink="/nodo-1" (click)="menuOpen = false">Nodo 1</a>
+        <a class="ham-item" routerLink="/nodo-2" (click)="menuOpen = false">Nodo 2</a>
+        <a class="ham-item" routerLink="/nodo-3" (click)="menuOpen = false">Nodo 3</a>
+        <a class="ham-item" routerLink="/nodo-4" (click)="menuOpen = false">Nodo 4</a>
       </div>
     </div>
   </aside>
 
-  <!-- Barra header — cubre todo el ancho incluyendo el sidebar -->
-  <header class="site-header">
-    <span class="site-header-text">Una investigación sobre el retorno de la prensa rosa a la televisión chilena</span>
-  </header>
+  <!-- Header fijo (oculto en nodos) -->
+  @if (!isNodo()) {
+    <header class="site-header">
+      <span class="site-header-text">Una investigación sobre el retorno de la prensa rosa a la televisión chilena</span>
+    </header>
+  }
 
-  <!-- Área derecha: grid -->
-  <div class="main-area">
-
-  <!-- Grid principal -->
-  <main class="vitrina-grid">
-
-    <!-- A: Panel imagen perrito (top-left) -->
-    <div class="panel panel--question">
-      <img src="assets/images/perrito.png" alt="perrito" class="panel-perrito-img">
-    </div>
-
-    <!-- B: Panel título VITRINA (top-center) -->
-    <div class="panel panel--title">
-      <h1 class="vitrina-title">VITRINA</h1>
-    </div>
-
-    <!-- C: Panel texto introductorio (top-right) -->
-    <div class="panel panel--intro">
-      <p class="panel-intro-text">
-En la década del 90 la televisión chilena comenzó a ver la vida privada de los famosos en un contenido rentable. A pesar de las críticas por ser invasivos o poco éticos, estos formatos nunca desaparecieron y se han adaptado a los de la televisión.      </p>
-    </div>
-
-    <!-- D: Panel video YouTube (bottom-left) -->
-    <div class="panel panel--person">
-      <iframe
-        class="panel-yt"
-        src="https://www.youtube.com/embed/iFhoYuUM0mo"
-        title="Video YouTube"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <!-- E: Panel imagen Sergio Rojas (bottom-center) -->
-    <div class="panel panel--main">
-      <img src="assets/images/sergio_rojas.png" alt="Sergio Rojas" class="panel-sergio-img">
-    </div>
-
-    <!-- F: Panel imagen Espectáculo (bottom-right) -->
-    <div class="panel panel--quote">
-      <img src="assets/images/espectaculo.png" alt="Espectáculo" class="panel-espectaculo-img">
-    </div>
-
-  </main>
-
-  </div><!-- /main-area -->
+  <!-- Contenido ruteado con animación de página -->
+  <div class="main-area" [class.nodo-mode]="isNodo()">
+    <router-outlet />
+  </div>
 
 </div>

@@ -29,16 +29,51 @@
 }
 
 html {
-  overflow: hidden;
   height: 100%;
 }
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: var(--bg);
 }
 
-body {
-  background-color: var(--bg);
+// ─── Estilos de páginas para page-flip ───────────────────────────────────────
+// page-flip manipula el DOM directamente, los estilos deben ser globales
+
+.page {
+  background-color: #99daff;
+  overflow: hidden;
+
+  &.--left  { box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.35); }
+  &.--right { box-shadow: inset  7px 0 30px -7px rgba(0, 0, 0, 0.35); }
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 48px 40px;
+}
+
+.page-label {
+  font-family: 'Roca One', 'Hammersmith One', sans-serif;
+  font-size: clamp(40px, 8vw, 100px);
+  color: #ee46d3;
+  text-shadow: 4px 4px 0 #ffde59, 7px 7px 0 rgba(0, 0, 0, 0.12);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.page-sub {
+  font-family: 'Contrail One', sans-serif;
+  font-size: clamp(13px, 1.6vw, 18px);
+  color: #ffde59;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #e91e8c;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
