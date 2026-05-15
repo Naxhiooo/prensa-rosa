@@ -5,7 +5,7 @@ import { Book } from '../shared/book/book';
   selector: 'app-nodo-4',
   imports: [Book],
   template: `
-    <app-book>
+    <app-book prevRoute="/nodo-3">
       @for (p of pages; track p) {
         <div class="page" data-density="hard">
           <div class="page-content">

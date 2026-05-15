@@ -91,6 +91,12 @@ html, body {
   padding: 36px 44px;
   overflow-y: auto;
 
+  // Evitar que los hijos se compriman: mantener su tamaño natural
+  // y dejar que el contenedor haga scroll
+  > * {
+    flex-shrink: 0;
+  }
+
   // Scrollbar vertical personalizado
   &::-webkit-scrollbar {
     width: 6px;
@@ -181,6 +187,39 @@ html, body {
 .page-data-label {
   font-weight: 600;
   color: #e91e8c;
+}
+
+// ─── Layout de dos columnas (texto + imagen) ─────────────────────────────
+.page-columns {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.page-col-left {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+
+.page-col-right {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page-col-img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 .page-img {
