@@ -240,3 +240,37 @@
     padding-top: 8px;
   }
 }
+
+// ===== FLECHA DERECHA INTELIGENTE (ESTILO CRISTAL) =====
+.nav-arrow-right {
+  position: fixed;
+  top: 50%;
+  right: 16px; 
+  transform: translateY(-50%);
+  z-index: 9999;
+  
+  // Estilo cristal idéntico al menú izquierdo
+  width: 38px;
+  height: 38px;
+  background: rgba(153, 218, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(233, 30, 140, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    background: rgba(153, 218, 255, 0.95);
+    border-color: rgba(233, 30, 140, 0.6);
+    transform: translateY(-50%) scale(1.05); // Crece sutilmente
+  }
+
+  @media (max-width: 768px) {
+    right: 10px;
+  }
+}

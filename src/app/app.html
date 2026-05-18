@@ -1,13 +1,11 @@
 <div class="page-wrapper" [class.nodo-mode]="isNodo()">
 
-  <!-- Blobs decorativos fijos -->
   <div class="deco-overlay">
     <div class="deco deco-1"></div>
     <div class="deco deco-2"></div>
     <div class="deco deco-3"></div>
   </div>
 
-  <!-- Columna izquierda — menú hamburguesa (fijo) -->
   <aside class="nav-column">
     <div class="nav-hamburger">
       <a class="nav-btn" routerLink="/" aria-label="Inicio" (click)="menuOpen = false">
@@ -29,16 +27,20 @@
     </div>
   </aside>
 
-  <!-- Header fijo (oculto en nodos) -->
   @if (!isNodo()) {
     <header class="site-header">
       <span class="site-header-text">Una investigación sobre el retorno de la prensa rosa a la televisión chilena</span>
     </header>
   }
 
-  <!-- Contenido ruteado con animación de página -->
   <div class="main-area" [class.nodo-mode]="isNodo()">
     <router-outlet />
   </div>
+
+  <a class="nav-arrow-right" [routerLink]="getNextRoute()" aria-label="Siguiente">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 18L15 12L9 6" stroke="#e91e8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
 
 </div>
