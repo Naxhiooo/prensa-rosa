@@ -26,6 +26,13 @@
   --font-display: 'Horizon', sans-serif;
   --font-body: 'Hammersmith One', sans-serif;
   --color-accent: #e91e8c;
+
+  // Paleta de contenido nodos
+  --color-text-base: #ff9900;
+  --color-nombre: #5533cc;
+  --color-doc: #c400ff;
+  --color-destacado: #007755;
+  --color-cita: #cc5500;
 }
 
 html {
@@ -413,4 +420,70 @@ html, body {
   font-style: italic;
   margin-top: auto;
   padding-top: 8px;
+}
+
+// ─── Nodo 1 — estilos específicos ─────────────────────────────────────────
+.n1, .n2 {
+  .page-body {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(11px, 1.15vw, 13px);
+    color: var(--color-text-base);
+    line-height: 1.9;
+  }
+
+  .page-quote {
+    color: var(--color-cita);
+    border-left-color: var(--color-cita);
+  }
+
+  // Tipos de hipervínculos
+  a {
+    color: var(--color-doc);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.15s;
+
+    &:visited { color: var(--color-accent); }
+    &:hover   { color: var(--color-nombre); }
+    &:active  { color: var(--color-accent); }
+  }
+
+  a.nombre {
+    color: var(--color-nombre);
+    &:visited { color: var(--color-accent); }
+  }
+
+  a.destacado {
+    color: var(--color-destacado);
+    &:visited { color: var(--color-accent); }
+  }
+
+  // Display block para habilitar float (reemplaza flex)
+  .page-content--text {
+    display: block;
+
+    > * + * { margin-top: 14px; }
+
+    // Clearfix para floats
+    &::after { content: ''; display: table; clear: both; }
+  }
+
+  // Wrappers de imagen con float
+  .page-img-wrap--right {
+    float: right;
+    width: 44%;
+    margin: 0 0 14px 18px;
+
+    .page-img { max-height: none; margin: 0; }
+    .page-img-caption { display: block; }
+  }
+
+  .page-img-wrap--left {
+    float: left;
+    width: 44%;
+    margin: 0 18px 14px 0;
+
+    .page-img { max-height: none; margin: 0; }
+    .page-img-caption { display: block; }
+  }
 }
