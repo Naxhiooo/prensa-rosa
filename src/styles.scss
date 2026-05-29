@@ -237,6 +237,19 @@ html, body {
   margin: 4px 0;
 }
 
+.page-video-wrap {
+  width: 100%;
+  margin: 8px 0;
+
+  .page-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    border: none;
+    border-radius: 6px;
+  }
+}
+
 .page-img-scroll {
   width: 100%;
   overflow-x: auto;
