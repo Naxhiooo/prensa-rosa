@@ -114,11 +114,13 @@
 
 // ===== HAMBURGER NAV =====
 .nav-hamburger {
-  position: relative;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   pointer-events: auto;
 }
 
@@ -220,6 +222,11 @@
     background: rgba(233, 30, 140, 0.15);
     color: #e91e8c;
   }
+}
+
+// En nodo no hay header: botones pegados al tope en todos los tamaños
+.nodo-mode .nav-column {
+  padding-top: 0;
 }
 
 // ===== RESPONSIVE =====
