@@ -40,6 +40,7 @@
       <p class="n1-qc-autor">Julie C. Innes</p>
       <p class="n1-qc-obra">Privacy, Intimacy, and Isolation</p>
     </div>
+    <img src="assets/images/nueva-visibilidad.png" class="n11-nueva-vis-img" alt="">
   </div>
 
   <!-- ═══ P2 (1.2) ═══ -->
@@ -50,10 +51,11 @@
     <p class="n1-p2-s n1-p2-s3">En esa línea, el sociólogo <span class="n1-p2-rosa">John B. Thompson</span> denomina "nueva visibilidad" al modo en que los medios modifican las condiciones en que personas, acciones y acontecimientos se hacen públicos.</p>
     <p class="n1-p2-s n1-p2-s4">Desde este punto, la exposición mediática no opera de forma neutra, sino a través de procesos de selección y encuadre que condicionan qué experiencias adquieren relevancia pública.</p>
     <p class="n1-p2-s n1-p2-s5">Lo problemático no es solo la exposición de la intimidad, sino entrar en la lógica de la prensa rosa que es dependiente a la economía del espectáculo el cual; la simplifica, la dramatiza y la vuelve rentable.</p>
-    <div class="n12-detr-titular">
+    <div class="n12-detr-titular" (click)="openModal12()" style="cursor:pointer">
       <span class="n1-dt-main">Detrás del titular, hay personas.</span>
       <span class="n1-dt-sub">La exposición tiene un <em>costo emocional.</em></span>
     </div>
+    <img src="assets/images/todo-muestra.png" class="n12-todo-muestra-img" alt="">
   </div>
 
   <!-- ═══ P3 (1.3) ═══ -->
@@ -62,6 +64,7 @@
       <span class="n13-titulo">MIRAR ES JUZGAR</span>
       <span class="n13-cuerpo">El voyeurismo no es solo <span class="n13-amarillo">morbo individual</span> — es una forma de <span class="n13-amarillo">regulación social</span>: hablar de quién cumple las normas y quién no.</span>
     </div>
+    <img src="assets/images/ojo-que-mira-Photoroom.png" class="n13-ojo-img" alt="">
     <img src="assets/images/caja.png" class="n13-caja-img" alt="">
     <div class="n13-quote-card">
       <span class="n13-qc-mark">"</span>
@@ -70,10 +73,26 @@
       <p class="n13-qc-autor">Lorena Antezana</p>
       <p class="n13-qc-obra">Dra en Información y Comunicación</p>
     </div>
+
+    <!-- Carrusel de casos -->
+    <div class="n13-carousel-wrap">
+      <p class="n13-carousel-label">CASOS — clic para rotar</p>
+      <div class="n13-carousel-box" (click)="rotateCarousel()">
+        <p class="n13-carousel-year">{{ carouselCases[carouselIndex()].year }}</p>
+        <p class="n13-carousel-title">{{ carouselCases[carouselIndex()].title }}</p>
+        <p class="n13-carousel-desc">{{ carouselCases[carouselIndex()].desc }}</p>
+      </div>
+      <div class="n13-carousel-dots">
+        @for (c of carouselCases; track $index) {
+          <span class="n13-carousel-dot" [class.n13-carousel-dot--active]="$index === carouselIndex()"></span>
+        }
+      </div>
+    </div>
   </div>
 
   <!-- ═══ P4 (1.4) ═══ -->
   <div class="page n1" data-density="hard">
+    <img src="assets/images/maldita-farandula.png" class="n14-maldita-img" alt="">
     <p class="n14-titulo">El análisis de <span class="n14-nombre">pamela</span></p>
     <p class="n14-col n14-col-a">La lógica de exposición no salió de la nada. Antes de que la prensa rosa se estableciera como formato televisivo reconocible en los años 2000, la televisión chilena ya venía construyendo una relación entre espectáculo, poder y visibilidad. De acuerdo con Pamela Jiles en Maldita farándula, políticos y empresarios del país llegaron a sentir que no existían si no aparecían en los medios de farándula. La prensa rosa no solo ocupó rostros televisivos o celebridades tradicionales: también funcionó como un espacio de legitimación pública. Estar en la farándula significaba ser visto, comentado y reconocido.</p>
     <p class="n14-col n14-col-b">Esta relación entre espectáculo, poder y distracción no era nueva. Durante la dictadura, programas como Sabor Latino ya mostraban cómo el entretenimiento podía operar como forma de distracción social. Sergio Riesenberg, entonces director de programación de TVN, reconoció que no tendría problemas con el gobierno por "mostrar pechugas", ya que el programa respondía a la necesidad de distraer la atención frente al caos económico. La exposición de cuerpos —especialmente femeninos— no funcionaba solo como entretención: era una estrategia capaz de desplazar la mirada pública hacia el espectáculo.<br><br>Con el retorno a la democracia, esta lógica no desapareció, sino que se acomodó dentro de una televisión cada vez más competitiva. Programas como Venga Conmigo (1993) y Viva el lunes (1995) consolidaron una fórmula basada en conversación, humor, espectáculo y celebridad. La exposición del cuerpo femenino comenzó a vincularse con la construcción de figuras televisivas cuya vida pública e íntima podía convertirse en relato mediático.</p>
@@ -131,12 +150,39 @@
 
   <!-- ═══ P6 (1.6) ═══ -->
   <div class="page n1" data-density="hard">
-    <div class="n16-img1-wrap">
+    <div class="n16-img1-wrap" (click)="openModal()" style="cursor:pointer">
       <img src="assets/images/nodo1/image1.png" class="n16-img1" alt="">
     </div>
-    <img src="assets/images/nodo1/image4.png" class="n16-img4" alt="">
     <div class="n16-detr-titular">
       <span class="n16-cuerpo">De acuerdo con el <span class="n16-amarillo">CNTV</span>, en octubre de 2019 la parrilla programática <span class="n16-amarillo">aumentó el contenido informativo en 554 horas</span> respecto de septiembre del mismo año, lo que muestra hasta qué punto la televisión abierta respondió al clima de crisis social.</span>
+    </div>
+
+    <!-- Carrusel rostros -->
+    <div class="n16r-wrap">
+      <p class="n16r-header">ROSTROS APARTADOS DE LA TELEVISIÓN</p>
+      <div class="n16r-img-wrap" (click)="nextRostro()">
+        <img [src]="'assets/images/nodo1/rostro_' + (rostroIndex() + 1) + '.png'" class="n16r-img" alt="">
+      </div>
+      <div class="n16r-dots">
+        @for (_ of [0,1,2,3,4,5,6]; track $index) {
+          <span class="n16r-dot" [class.n16r-dot--active]="$index === rostroIndex()"></span>
+        }
+      </div>
+    </div>
+
+    <img src="assets/images/conflicto-formato.png" class="n16-conflicto-img" alt="">
+
+    <!-- Carrusel programas -->
+    <div class="n16p-wrap">
+      <p class="n16p-header">PROGRAMAS MODIFICADOS Y CANCELADOS LUEGO DEL ESTALLIDO SOCIAL</p>
+      <div class="n16p-img-wrap" (click)="nextPrograma()">
+        <img [src]="'assets/images/nodo1/programa_' + (programaIndex() + 1) + '.png'" class="n16p-img" alt="">
+      </div>
+      <div class="n16p-dots">
+        @for (_ of [0,1,2,3,4,5]; track $index) {
+          <span class="n16p-dot" [class.n16p-dot--active]="$index === programaIndex()"></span>
+        }
+      </div>
     </div>
   </div>
 
@@ -158,6 +204,33 @@
   <!-- ═══ P8 (1.8) ═══ -->
   <div class="page n1" data-density="hard">
     <img src="assets/images/nodo1/alerta-spoiler.png" class="n18-alerta-img" alt="">
+    <img src="assets/images/tele1.png" class="n18-tele1-img" alt="">
+    <div class="n18-cuaderno">
+      <p class="n18-cuaderno-texto">
+        <span class="n18-cuaderno-titulo">¿Criticar la farándula es lo mismo que hacerla?<br></span>
+        <span class="n18-cuaderno-cuerpo">A veces opinar sobre la intimidad ajena es tan invasivo como exponerla.</span>
+      </p>
+    </div>
+
+    <div class="n18c-wrap">
+      <p class="n18c-header">LOS REALITIES QUE COMENZARON TODO</p>
+      <div class="n18c-img-wrap">
+        <img [src]="'assets/images/nodo1/' + realitySlides[realityIndex()].img" class="n18c-img" alt="">
+      </div>
+      <div class="n18c-info">
+        <p class="n18c-title">{{ realitySlides[realityIndex()].title }}</p>
+        <p class="n18c-desc">{{ realitySlides[realityIndex()].desc }}</p>
+      </div>
+      <div class="n18c-controls">
+        <button class="n18c-btn" (click)="prevReality()">‹</button>
+        <div class="n18c-dots">
+          @for (s of realitySlides; track $index) {
+            <span class="n18c-dot" [class.n18c-dot--active]="$index === realityIndex()" (click)="goToReality($index)"></span>
+          }
+        </div>
+        <button class="n18c-btn" (click)="nextReality()">›</button>
+      </div>
+    </div>
   </div>
 
   <!-- ═══ P9 (1.9) ═══ -->
@@ -168,6 +241,7 @@
     <div class="n19-img3-wrap">
       <img src="assets/images/nodo1/image3.png" class="n19-img3" alt="">
     </div>
+    <img src="assets/images/rosa-y-reality.png" class="n19-rosayreality-img" alt="">
   </div>
 
   <!-- ═══ P10 (1.10) ═══ -->
@@ -178,12 +252,44 @@
     <p class="n110-texto">Los vínculos afectivos, los conflictos personales y las emociones dejaron de pertenecer exclusivamente al ámbito íntimo y pasaron a convertirse en contenido visible, narrable y consumible. Más que limitarse a entretener, estos formatos participaron de una cultura mediática en la que lo privado adquiere valor como espectáculo y en la que la construcción de personajes, polémicas y relatos emocionales se volvió parte central del interés televisivo.<br><br>Esta lógica también puede entenderse desde la idea de representación. En <span class="n110-subrayado">La Poética</span>, el pensador, Aristóteles planteó que la mímesis no consistía en copiar la realidad tal como era, sino en convertirla en relato. En la prensa rosa y la telerrealidad, eso se manifiesta en cómo la televisión tomó la vida privada y la transformó en personajes, conflictos y emociones para la pantalla. Más que mostrar la realidad de forma transparente, estos formatos la editaron, la organizaron y la dramatización. Así, lo íntimo dejó de presentarse como algo puramente personal y pasó a ser parte de una historia construida para atraer, emocionar, generar polémica y producir rating.<br><br>De acuerdo con Lorena Antezana, quien sostiene que los seres humanos nos formamos a través de relatos y tendemos a ordenar el mundo mediante oposiciones, como lo bueno y lo malo. Desde esta perspectiva, la prensa rosa y la telerrealidad funcionan porque simplifican experiencias complejas y las vuelven reconocibles dentro de estructuras narrativas familiares.</p>
   </div>
 
-  <!-- ═══ P11 (1.11) ═══ -->
-  <div class="page n1" data-density="hard">
-  </div>
-
-  <!-- ═══ P12 (1.12) ═══ -->
-  <div class="page n1" data-density="hard">
-  </div>
-
 </app-book>
+
+<app-modal [open]="modalOpen()" (closed)="closeModal()">
+  <p class="modal-tbl-title">Denuncias en programas de los géneros conversación y telerealidad</p>
+  <p class="modal-tbl-sub">*Porcentaje correspondiente al total de las denuncias &nbsp;|&nbsp; **Hasta abril de 2025. Sobre el tema analizado: Prensa Rosa y Telerealidad</p>
+  <div class="modal-tbl-wrap">
+    <table class="modal-tbl">
+      <thead>
+        <tr>
+          <th>AÑO</th>
+          <th>TEMA DENUNCIADO 1*</th>
+          <th>TEMA DENUNCIADO 2*</th>
+          <th>TEMA DENUNCIADO 3*</th>
+          <th>PROGRAMA DENUNCIADO 1**</th>
+          <th>PROGRAMA DENUNCIADO 2**</th>
+          <th>PROGRAMA DENUNCIADO 3**</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2010</td><td>Dignidad de las personas 33,5%</td><td>Sensacionalismo 19%</td><td>Protección a los menores 17,5%</td><td>PELOTÓN TVN 39</td><td>SQP CHV 23</td><td>NO APLICA</td></tr>
+        <tr><td>2011</td><td>SENSACIONALISMO 21,5%</td><td>DIGNIDAD DE LAS PERSONAS 20,6%</td><td>PROTECCIÓN A LA AUDIENCIA INFANTIL 15,5%</td><td>AÑO CERO CANAL 13 253</td><td>EN PORTADA UCV TV 32</td><td>QUIERO MI FIESTA CANAL 13 23</td></tr>
+        <tr><td>2012</td><td>DIGNIDAD DE LAS PERSONAS 31,6%</td><td>VIOLENCIA 25%</td><td>TEMAS VALÓRICOS 14,4%</td><td>PAREJA PERFECTA CANAL 13 1397</td><td>MUNDOS OPUESTOS CANAL 13 542</td><td>SQP CHV 44</td></tr>
+        <tr><td>2013</td><td>DIGNIDAD DE LAS PERSONAS 21,7%</td><td>VALORES NACIONALES 18,9%</td><td>MANEJO DE LA INFORMACIÓN 12%</td><td>MUNDOS OPUESTOS 2 CANAL 13 65</td><td>NO APLICA</td><td>NO APLICA</td></tr>
+        <tr><td>2014</td><td>DIGNIDAD DE LAS PERSONAS 24,3%</td><td>VALORES NACIONALES 23,3%</td><td>PROTECCIÓN AUDIENCIA INFANTIL 11,7%</td><td>SQP CHV 300</td><td>PRIMER PLANO CHV 204</td><td>MENTIRAS VERDADERAS LA RED 59</td></tr>
+        <tr><td>2015</td><td>DIGNIDAD DE LAS PERSONAS 38,5%</td><td>VULNERACIÓN DERECHOS FUNDAMENTALES 15,9%</td><td>OTROS MOTIVOS 12,1%</td><td>AMOR A PRUEBA MEGA 237</td><td>MANOS AL FUEGO CHV 62</td><td>PRIMER PLANO 40</td></tr>
+        <tr><td>2016</td><td>DIGNIDAD HUMANA 43,9%</td><td>OTROS MOTIVOS 18,5%</td><td>DEMOCRACIA 12,5%</td><td>¿VOLVERÍAS CON TU EX? MEGA 296</td><td>PRIMER PLANO CHV 30</td><td>ESCUELA PARA MARIDOS CHV 20</td></tr>
+        <tr><td>2017</td><td>DIGNIDAD HUMANA 53,1%</td><td>MOTIVOS NO ESTABLECIDOS EN LA LEY 15,6%</td><td>DEMOCRACIA 14,4%</td><td>DOBLE TENTACIÓN MEGA 1151</td><td>MENTIRAS VERDADERAS LA RED 136</td><td>PRIMER PLANO CHV 96</td></tr>
+        <tr><td>2018</td><td>DIGNIDAD HUMANA 56,9%</td><td>DEMOCRACIA 18%</td><td>FORMACIÓN DE NIÑEZ Y LA JUVENTUS 7,8%</td><td>ROJO: EL COLOR DEL TALENTO 126</td><td>PRIMER PLANO CHV 101</td><td>INTRUSOS 49</td></tr>
+        <tr><td>2019</td><td>DIGNIDAD HUMANA 44,5%</td><td>MOTIVOS NO ESTABLECIDOS EN LA LEY 19,2%</td><td>DEMOCRACIA 12,3%</td><td>NO HAY INFO</td><td>NO HAY INFO</td><td>NO HAY INFO</td></tr>
+        <tr><td>2020</td><td>DIGNIDAD HUMANA 67,6%</td><td>DEMOCRACIA 15,3%</td><td>PAZ 5,5%</td><td>MENTIRAS VERDADERAS LA RED 111</td><td>NO APLICA</td><td>NO APLICA</td></tr>
+        <tr><td>2021</td><td>DIGNIDAD HUMANA 49,2%</td><td>DEMOCRACIA 17,5%</td><td>PAZ 5,7%</td><td>MENTIRAS VERDADERAS LA RED 457</td><td>NO APLICA</td><td>NO APLICA</td></tr>
+        <tr><td>2022</td><td>DIGNIDAD HUMANA 39,8%</td><td>DDFF RECONOCIDOS EN LA CONSTITUCIÓN 10,6%</td><td>DEMOCRACIA 8,2%</td><td>NO HAY INFO</td><td>NO HAY INFO</td><td>NO HAY INFO</td></tr>
+        <tr class="modal-tbl-noinfo"><td>2023</td><td colspan="6">NO HAY INFO DE DESAGREGADO</td></tr>
+        <tr class="modal-tbl-noinfo"><td>2024</td><td colspan="6">NO HAY INFO DE DESAGREGADO</td></tr>
+        <tr class="modal-tbl-noinfo"><td>2025</td><td colspan="6">NO HAY INFO DE DESAGREGADO</td></tr>
+      </tbody>
+    </table>
+  </div>
+</app-modal>
+
+<app-modal [open]="modal12Open()" [content]="modal12Content" (closed)="closeModal12()"></app-modal>
