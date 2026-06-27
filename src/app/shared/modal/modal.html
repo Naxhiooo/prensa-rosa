@@ -1,0 +1,11 @@
+@if (open) {
+  <div class="modal-backdrop" (click)="close()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <button class="modal-close-btn" (click)="close()">✕</button>
+      @if (_safeContent) {
+        <div class="modal-content-html" [innerHTML]="_safeContent"></div>
+      }
+      <ng-content></ng-content>
+    </div>
+  </div>
+}

@@ -1,0 +1,70 @@
+
+<h2 class="sr-only">Mockup de página 1920x1080: texto sobre Pamela Jiles, Menem-Bolocco, Sabor Latino y Viva el lunes, junto a un carrusel de 4 casos de farándula que rotan al hacer clic</h2>
+
+<div style="background: #99daff; aspect-ratio: 1920/1080; width: 100%; border-radius: var(--border-radius-lg); padding: 40px; box-sizing: border-box; display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; font-family: var(--font-sans);">
+
+  <div style="display: flex; flex-direction: column; gap: 16px; overflow: hidden;">
+    <div style="background: #ffde59; border-radius: var(--border-radius-md); padding: 14px 20px; transform: rotate(-1deg); max-width: 360px;">
+      <p style="margin: 0; font-size: 18px; font-weight: 500; color: #6A2BD9; line-height: 1.3;">LA FARÁNDULA COMO LEGITIMACIÓN</p>
+    </div>
+
+    <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #1a1a2e;">
+      De acuerdo con Pamela Jiles en <span style="font-style: italic;">Maldita farándula</span>, políticos y empresarios sintieron que no existían si no aparecían en los medios de farándula. Estar en la farándula significaba ser visto, comentado y reconocido.
+    </p>
+
+    <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #1a1a2e;">
+      Un claro ejemplo fue Carlos Menem, cuya relación con Cecilia Bolocco fue seguida por la prensa chilena como un acontecimiento farandulero — su figura empezó a aparecer en la narrativa de romance y vida privada.
+    </p>
+
+    <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #1a1a2e;">
+      Esta lógica no era nueva: durante la dictadura, programas como Sabor Latino ya mostraban cómo el entretenimiento podía operar como distracción social. La exposición de cuerpos, especialmente femeninos, desplazaba la mirada pública hacia el espectáculo.
+    </p>
+
+    <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #1a1a2e;">
+      Con el retorno a la democracia, esta lógica se acomodó en una TV competitiva. Programas como Venga Conmigo (1993) y, especialmente, Viva el lunes (1995) —con Cecilia Bolocco, Álvaro Salas y Kike Morandé— consolidaron la fórmula de conversación, humor, espectáculo y celebridad.
+    </p>
+
+    <div style="background: #ee46d3; border-radius: 50%; width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; box-sizing: border-box; margin-top: auto;">
+      <p style="margin: 0; font-size: 13px; color: #fff; line-height: 1.4;">La farándula comenzó a funcionar como una ficción basada en personas reales</p>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <p style="margin: 0; font-size: 13px; color: #534AB7; font-weight: 500; text-align: center;">CASOS — clic para rotar</p>
+
+    <div id="carousel" style="position: relative; flex: 1; background: #8c52ff; border-radius: var(--border-radius-lg); display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 24px; box-sizing: border-box; min-height: 320px;" onclick="rotateCase()">
+      <div id="case-content" style="text-align: center; color: #fff;">
+        <p id="case-year" style="margin: 0 0 8px; font-size: 13px; color: #d4b8ff; font-weight: 500;">1995-1998</p>
+        <p id="case-title" style="margin: 0 0 12px; font-size: 20px; font-weight: 500;">Bolocco y Morandé</p>
+        <p id="case-desc" style="margin: 0; font-size: 13px; line-height: 1.6; color: #ECEAFB;">La cercanía entre ambos fue seguida como una novela. La farándula funcionó como ficción basada en personas reales, sin guión formal.</p>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; gap: 8px;">
+      <div id="dot-0" style="width: 8px; height: 8px; border-radius: 50%; background: #534AB7;"></div>
+      <div id="dot-1" style="width: 8px; height: 8px; border-radius: 50%; background: #CECBF6;"></div>
+      <div id="dot-2" style="width: 8px; height: 8px; border-radius: 50%; background: #CECBF6;"></div>
+      <div id="dot-3" style="width: 8px; height: 8px; border-radius: 50%; background: #CECBF6;"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const cases = [
+    { year: "1995-1998", title: "Bolocco y Morandé", desc: "La cercanía entre ambos fue seguida como una novela. La farándula funcionó como ficción basada en personas reales, sin guión formal." },
+    { year: "1998", title: "Mundial de Francia", desc: "El vínculo entre futbolistas y modelos ocupó la conversación mediática: camarines, fiestas y secretos íntimos como acceso privilegiado." },
+    { year: "fin de los 90", title: "Pamela Díaz y Manuel Neira", desc: "Su matrimonio fue transmitido en vivo y los preparativos organizados como un docu-reality: la vida privada producida como espectáculo." },
+    { year: "2004", title: "Zamorano y Kenita Larraín", desc: "La cancelación de su matrimonio se transformó en acontecimiento farandulero, rodeado de especulación, versiones y prensa." }
+  ];
+  let current = 0;
+  function rotateCase() {
+    current = (current + 1) % cases.length;
+    document.getElementById('case-year').textContent = cases[current].year;
+    document.getElementById('case-title').textContent = cases[current].title;
+    document.getElementById('case-desc').textContent = cases[current].desc;
+    for (let i = 0; i < cases.length; i++) {
+      document.getElementById('dot-' + i).style.background = (i === current) ? '#534AB7' : '#CECBF6';
+    }
+  }
+</script>

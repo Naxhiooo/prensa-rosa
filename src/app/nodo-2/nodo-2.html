@@ -2,50 +2,172 @@
 
   <!-- ═══ P1 (2.1) ═══ -->
   <div class="page n2" data-density="hard">
+    <p class="n21-titulo">¿Por qué<br>se vende y compra<br>la <span class="n21-intimidad">intimidad</span>?</p>
+    <img src="assets/images/truman.png" class="n21-truman-img" alt="">
+    <div class="n21-circulo">
+      <span class="n21-circulo-texto">¿Existir es suficiente hoy?<br>Para la tele, NO. Solo importas cuando te ven. Y si nadie te ve, mejor besa a alguien.</span>
+    </div>
   </div>
 
   <!-- ═══ P2 (2.2) ═══ -->
   <div class="page n2" data-density="hard">
+
+    <div class="n22vv-slider" (click)="nextVv()">
+
+      <!-- Slide 1 — portada -->
+      @if (vvIndex() === 0) {
+        <div class="n22vv-slide n22vv-s1">
+          <span class="n22vv-tag">Caso de estudio · Perú 2012</span>
+          <div class="n22vv-divider"></div>
+          <p class="n22vv-s1-title">El valor<br>de la<br><span>verdad</span></p>
+          <p class="n22vv-s1-sub">Un programa donde las confesiones de la vida privada son mercancía: la persona ofrece su intimidad a cambio de dinero y acepta legalmente convertir su privacidad en un medio para conseguir popularidad.</p>
+          <div class="n22vv-divider"></div>
+          <p class="n22vv-s1-meta">Basado en: Huamán Vento, Alicia<br>"El valor de la verdad: la intimidad como mercancía"</p>
+        </div>
+      }
+
+      <!-- Slide 2 — formato -->
+      @if (vvIndex() === 1) {
+        <div class="n22vv-slide">
+          <p class="n22vv-stitle">¿En qué consiste el formato?</p>
+          <div class="n22vv-s2-grid">
+            <div class="n22vv-s2-card">
+              <div class="n22vv-label">Antes del programa</div>
+              <p>El participante y sus acompañantes firman una <strong>declaración jurada</strong> que autoriza utilizar su información privada.</p>
+            </div>
+            <div class="n22vv-s2-card">
+              <div class="n22vv-label">Durante el programa</div>
+              <p>Responde <strong>21 preguntas</strong> conectado a un polígrafo, frente al conductor, acompañantes y público en vivo.</p>
+            </div>
+            <div class="n22vv-s2-card">
+              <div class="n22vv-label">Si miente</div>
+              <p>El polígrafo detecta la mentira, el juego termina y el participante <strong>pierde todo el dinero acumulado.</strong></p>
+            </div>
+            <div class="n22vv-s2-card">
+              <div class="n22vv-label">Comodines</div>
+              <p>Botón rojo (acompañante salva) y cambio de respuesta disponible <strong>2 veces.</strong></p>
+            </div>
+          </div>
+          <div class="n22vv-s2-bottom">
+            <p>"El hecho de que el televidente suba a una montaña rusa de emociones y pase de la risa al llanto o a la sorpresa. <span>He conseguido un público cautivo.</span>"<br>— Beto Ortiz, conductor</p>
+          </div>
+        </div>
+      }
+
+      <!-- Slide 3 — precio -->
+      @if (vvIndex() === 2) {
+        <div class="n22vv-slide">
+          <p class="n22vv-stitle">La intimidad<br>tiene precio</p>
+          <p class="n22vv-s3-sub">El programa convierte la confesión íntima en una estructura de juego con reglas, polígrafo y tabla de precios incluidos.</p>
+          <div class="n22vv-s3-piramide">
+            <div class="n22vv-ptitle">Niveles y montos — Soles peruanos</div>
+            <div class="n22vv-s3-row"><span class="n22vv-pregs">1 pregunta</span><span class="n22vv-monto">S/. 50.000</span></div>
+            <div class="n22vv-s3-row"><span class="n22vv-pregs">2 preguntas</span><span class="n22vv-monto">S/. 25.000</span></div>
+            <div class="n22vv-s3-row"><span class="n22vv-pregs">3 preguntas</span><span class="n22vv-monto">S/. 15.000</span></div>
+            <div class="n22vv-s3-row"><span class="n22vv-pregs">4 preguntas</span><span class="n22vv-monto">S/. 10.000</span></div>
+            <div class="n22vv-s3-row"><span class="n22vv-pregs">5 preguntas</span><span class="n22vv-monto">S/. 5.000</span></div>
+            <div class="n22vv-s3-row"><span class="n22vv-pregs">6 preguntas</span><span class="n22vv-monto">S/. 1.000</span></div>
+          </div>
+          <div class="n22vv-s3-note">
+            <p>El participante puede retirarse con el dinero ganado al final de cada nivel — o continuar arriesgando sus confesiones por un monto mayor.</p>
+          </div>
+        </div>
+      }
+
+      <!-- Slide 4 — timeline -->
+      @if (vvIndex() === 3) {
+        <div class="n22vv-slide">
+          <p class="n22vv-stitle">Lo que ocurrió después</p>
+          <div class="n22vv-s4-timeline">
+            <div class="n22vv-s4-event">
+              <div class="n22vv-s4-date">7 julio 2012</div>
+              <p class="n22vv-s4-text">Debut del programa. La primera participante, una joven de 19 años sin experiencia mediática, expone detalles íntimos de su vida. La emisión genera enorme atención y la participante es atacada públicamente en los días siguientes.</p>
+            </div>
+            <div class="n22vv-s4-event">
+              <div class="n22vv-s4-date">Meses después</div>
+              <p class="n22vv-s4-text">La participante es encontrada muerta. Su ex pareja, quien la había acompañado en el programa, confiesa el crimen: <strong>reclamaba una parte del dinero ganado en el programa.</strong></p>
+            </div>
+            <div class="n22vv-s4-event">
+              <div class="n22vv-s4-date">23 sept. 2012</div>
+              <p class="n22vv-s4-text">Queja ante la SNRTV por vulneración de 5 principios del Código de Ética. La producción argumenta que la participante firmó voluntariamente.</p>
+            </div>
+            <div class="n22vv-s4-event">
+              <div class="n22vv-s4-date">Fallo del Comité</div>
+              <p class="n22vv-s4-text">El Comité concluye que <strong>no hubo vulneración</strong> porque existía un acuerdo legal firmado. El programa continúa al aire.</p>
+            </div>
+          </div>
+        </div>
+      }
+
+      <!-- Slide 5 — preguntas -->
+      @if (vvIndex() === 4) {
+        <div class="n22vv-slide">
+          <p class="n22vv-stitle">Las preguntas<br>que quedan</p>
+          <div class="n22vv-s5-pregs">
+            <div class="n22vv-s5-preg">
+              <div class="n22vv-qnum">Cuestión 1 — Dignidad</div>
+              <p>¿Es lícito protagonizar escenas de autodenigración pública a cambio de dinero? Que alguien decida algo sobre sí mismo no convierte su decisión en moral.</p>
+            </div>
+            <div class="n22vv-s5-preg">
+              <div class="n22vv-qnum">Cuestión 2 — Terceros</div>
+              <p>La vida privada expuesta no solo pertenece al participante: hay personas involucradas cuyos nombres son mencionados sin autorización. Su intimidad también se convierte en mercancía.</p>
+            </div>
+            <div class="n22vv-s5-preg">
+              <div class="n22vv-qnum">Cuestión 3 — Lo legal no es lo ético</div>
+              <p>Que la SNRTV acepte la difusión del programa no significa que lo recomienda. Lo legal y lo ético no son lo mismo.</p>
+            </div>
+          </div>
+          <div class="n22vv-s5-cierre">
+            <p>Firmar un contrato no convierte<br>en ético lo que no lo es.</p>
+          </div>
+        </div>
+      }
+
+      <!-- Controles -->
+      <div class="n22vv-dots">
+        @for (_ of [0,1,2,3,4]; track $index) {
+          <span class="n22vv-dot" [class.n22vv-dot--active]="$index === vvIndex()"></span>
+        }
+      </div>
+
+    </div>
   </div>
 
   <!-- ═══ P3 (2.3) ═══ -->
   <div class="page n2" data-density="hard">
+    <div class="n23-banner">
+      <p class="n23-banner-texto">El reality no solo muestra comportamientos. También enseña cuáles son premiados.</p>
+    </div>
+    <img src="assets/images/dentro-reality.png" class="n23-dentro-img" alt="">
+    <img src="assets/images/atencion.png" class="n23-atencion-img" alt="">
   </div>
 
   <!-- ═══ P4 (2.4) ═══ -->
   <div class="page n2" data-density="hard">
+    <img src="assets/images/atencion.png" class="n24-atencion-img" alt="">
+    <div class="n24-circulo">
+      <span class="n24-circulo-texto">¿Exponer tu vida es una decisión libre?<br>Sí. Dentro de un formato que ya decidió cuánto vale lo que vas a contar.</span>
+    </div>
+    <img src="assets/images/tele2.png" class="n24-tele2-img" alt="">
+    <img src="assets/images/formato-balanza.png" class="n24-balanza-img" alt="">
   </div>
 
   <!-- ═══ P5 (2.5) ═══ -->
   <div class="page n2" data-density="hard">
+      <div class="n25-band">
+        <p class="n25-band-texto">La vulnerabilidad ajena dejó de incomodar. Hoy es entretenimiento legítimo.</p>
+      </div>
+      <img src="assets/images/claudio-varas.png" class="n25-claudio-img" alt="">
+      <div class="n25-cols">
+        <p class="n25-col-left">Paula Sibilia, en La intimidad como espectáculo, ayuda a profundizar este procedimiento. La exposición de la vida privada no aparece solo como un exceso televisivo, sino como parte de una cultura donde el sujeto aprende a volverse visible para adquirir existencia pública. La intimidad ya no se guarda, se prepara, se narra y se ofrece al público.<br><br>De este modo, el camino desde la prensa rosa hacia el reality no implica una separación, sino una intensificación. La prensa rosa comenta la vida privada de las figuras públicas; el reality la organiza, la monetiza y la convierte en experiencia participativa. Lo íntimo deja de ser únicamente objeto de curiosidad y pasa a funcionar como materia prima de una economía mediática basada en emoción, visibilidad y juicio público.</p>
+        <p class="n25-col-right">Christian Fuchs toma esta idea de la audiencia como mercancía para explicar que los medios no venden solo contenido, sino también atención. En ese sentido, la vida privada expuesta adquiere valor porque logra reunir espectadores.<br><br>Desde esta perspectiva, el problema no es solo que la televisión muestre intimidad, sino que la convierte en una máquina de atención. La vida privada del participante se usa para producir rating, conversación y valor mediático. Lo íntimo se vuelve mercancía porque logra hacer mirar.</p>
+      </div>
   </div>
 
   <!-- ═══ P6 (2.6) ═══ -->
   <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P7 (2.7) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P8 (2.8) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P9 (2.9) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P10 (2.10) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P11 (2.11) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P12 (2.12) ═══ -->
-  <div class="page n2" data-density="hard">
+    <img src="assets/images/diagrama.png" class="n26-diagrama-img" alt="">
+    <img src="assets/images/camara2.png" class="n26-camara2-img" alt="">
   </div>
 
 </app-book>
