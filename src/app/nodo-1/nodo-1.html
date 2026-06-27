@@ -51,7 +51,7 @@
     <p class="n1-p2-s n1-p2-s3">En esa línea, el sociólogo <span class="n1-p2-rosa">John B. Thompson</span> denomina "nueva visibilidad" al modo en que los medios modifican las condiciones en que personas, acciones y acontecimientos se hacen públicos.</p>
     <p class="n1-p2-s n1-p2-s4">Desde este punto, la exposición mediática no opera de forma neutra, sino a través de procesos de selección y encuadre que condicionan qué experiencias adquieren relevancia pública.</p>
     <p class="n1-p2-s n1-p2-s5">Lo problemático no es solo la exposición de la intimidad, sino entrar en la lógica de la prensa rosa que es dependiente a la economía del espectáculo el cual; la simplifica, la dramatiza y la vuelve rentable.</p>
-    <div class="n12-detr-titular">
+    <div class="n12-detr-titular" (click)="openModal12()" style="cursor:pointer">
       <span class="n1-dt-main">Detrás del titular, hay personas.</span>
       <span class="n1-dt-sub">La exposición tiene un <em>costo emocional.</em></span>
     </div>
@@ -291,3 +291,5 @@
     </table>
   </div>
 </app-modal>
+
+<app-modal [open]="modal12Open()" [content]="modal12Content" (closed)="closeModal12()"></app-modal>

@@ -12,6 +12,15 @@ export class Nodo1 {
   openModal() { this.modalOpen.set(true); }
   closeModal() { this.modalOpen.set(false); }
 
+  modal12Open = signal(false);
+  readonly modal12Content = `
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. <a href="https://example.com" target="_blank">Ver fuente de referencia</a>.</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum. <strong>Curabitur pretium tincidunt lacus.</strong> Nulla gravida orci a odio, et tempus feugiat. Nullam varius, turpis molestie dictum ultricies.</p>
+  `;
+  openModal12() { this.modal12Open.set(true); }
+  closeModal12() { this.modal12Open.set(false); }
+
   readonly carouselCases = [
     {
       year: '1995-1998',
