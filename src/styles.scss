@@ -2693,18 +2693,18 @@ html, body {
 
 .n31-cntv-img {
   position: absolute;
-  top: 26%;
-  left: 3%;
-  width: 54%;
+  top: 25%;
+  left: 13%;
+  width: 46%;
   height: auto;
 }
 
 .n31-circulo {
   position: absolute;
-  top: 29%;
+  top: 20%;
   right: 3%;
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
   border-radius: 50%;
   transform: rotate(-10deg);
   background: linear-gradient(to bottom, #5100e8, #ff5291);
@@ -2720,7 +2720,7 @@ html, body {
 
 .n31-circulo-destacado {
   font-family: 'Horizon', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 900;
   color: #fff;
   line-height: 1;
@@ -2730,7 +2730,7 @@ html, body {
 
 .n31-circulo-cita {
   font-family: 'Ruda', sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   color: #fff;
   line-height: 1.5;
   margin: 0;
@@ -2739,7 +2739,7 @@ html, body {
 
 .n31-quote-card {
   position: absolute;
-  bottom: 5%;
+  bottom: 22%;
   left: 4%;
   border: 2px solid #5533cc;
   border-radius: 12px;
@@ -2762,15 +2762,15 @@ html, body {
 
 .n31-qc-body {
   font-family: 'Ruda', sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   color: #5533cc;
-  line-height: 1.5;
+  line-height: 1;
   margin: 0;
 }
 
 .n31-qc-autor {
   font-family: 'Ruda', sans-serif;
-  font-size: 16px;
+  font-size: 11px;
   color: #e91e8c;
   font-weight: 700;
   margin-top: 4px;
@@ -2779,15 +2779,276 @@ html, body {
 
 .n31-qc-obra {
   font-family: 'Clear Sans', 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 11px;
   color: #5533cc;
   margin: 0;
 }
 
 .n31-flames-img {
   position: absolute;
-  bottom: 3%;
+  bottom: 13%;
   right: 4%;
   width: 15%;
   height: auto;
 }
+
+.n31-caron-img {
+  position: absolute;
+  bottom: 3%;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 15%;
+  height: auto;
+}
+
+.n31-stingo-texto {
+  position: absolute;
+  bottom: 4%;
+  left: 18%;
+  width: 63%;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.n31-stingo-nombre {
+  text-decoration: underline;
+}
+
+.n33-parcito-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+}
+
+.n33-texto {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 94%;
+  font-family: 'Ruda', sans-serif;
+  font-size: 13px;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.n33-dest {
+  color: #e91e8c;
+  text-decoration: underline;
+}
+
+.n33-texto2 {
+  position: absolute;
+  bottom: 8%;
+  left: 3%;
+  width: 94%;
+  font-family: 'Ruda', sans-serif;
+  font-size: 17px;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.n32-codigo-img {
+  position: absolute;
+  top: 23%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: auto;
+}
+
+.n32-marco-img {
+  position: absolute;
+  top: 0%;
+  left: 58%;
+  width: 45%;
+  height: auto;
+}
+
+.n32-ley-card {
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 16px;
+  line-height: 1.5;
+}
+
+.n32-ley-card--1 { top: 15%; right: 10%; width: 32%; }
+.n32-ley-card--2 { top: 29%; right: 10%; width: 32%; }
+.n32-ley-card--3 { top: 46%; right: 10%; width: 82%; }
+.n32-ley-card--4 { top: 62%; right: 10%; width: 82%; }
+.n32-ley-card--5 { top: 72%; right: 10%; width: 82%; }
+.n32-ley-card--6 { top: 85%; right: 10%; width: 82%; }
+
+// Card 1
+.n32-lc1-titulo { font-family: 'Horizon', sans-serif; font-size: 18px; color: #e91e8c; text-transform: uppercase; }
+.n32-lc1-texto  { font-family: 'Clear Sans', 'Open Sans', sans-serif; font-size: 10px; color: #000; }
+.n32-lc1-num    { color: #e91e8c; }
+
+// Card 2
+.n32-lc2-titulo { font-family: 'Horizon', sans-serif; font-size: 18px; color: #5728bc; text-transform: uppercase; }
+.n32-lc2-texto  { font-family: 'Clear Sans', 'Open Sans', sans-serif; font-size: 10px; color: #000; }
+.n32-lc2-num    { color: #e91e8c; }
+
+// Card 3
+.n32-lc3-titulo { font-family: 'Horizon', sans-serif; font-size: 18px; color: #e91e8c; text-transform: uppercase; }
+.n32-lc3-texto  { font-family: 'Clear Sans', 'Open Sans', sans-serif; font-size: 10px; color: #000; }
+.n32-lc3-num    { color: #e91e8c; }
+.n32-lc3-lista  { font-family: 'Clear Sans', 'Open Sans', sans-serif; font-size: 10px; color: #000; margin: 4px 0 0 0; padding-left: 16px; line-height: 1.6; }
+
+// Card 4
+.n32-lc4-titulo { font-family: 'Horizon', sans-serif; font-size: 18px; color: #5728bc; text-transform: uppercase; }
+.n32-lc4-texto  { font-family: 'Clear Sans', 'Open Sans', sans-serif; font-size: 10px; color: #000; }
+.n32-lc4-num    { color: #e91e8c; }
+
+// Card 5
+.n32-lc5-titulo { font-family: 'Horizon', sans-serif; font-size: 18px; color: #e91e8c; text-transform: uppercase; }
+.n32-lc5-texto  { font-family: 'Clear Sans', 'Open Sans', sans-serif; font-size: 10px; color: #000; }
+.n32-lc5-num    { color: #e91e8c; }
+
+
+// Card 6
+.n32-ley-card--6 { background: #fef2ab; }
+.n32-lc6-texto  { font-family: 'Horizon', sans-serif; font-size: 20px; color: #000; text-transform: uppercase; font-weight: 700; }
+.n32-lc6-morado { color: #5533cc; text-transform: uppercase; font-weight: 700; }
+.n32-lc6-rosado { color: #e91e8c; text-transform: uppercase; font-weight: 700; }
+
+.n34-mujer-img {
+  position: absolute;
+  top: 93%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  width: 12%;
+  height: auto;
+  z-index: 1;
+}
+
+.n34-tbl-wrap {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 94%;
+}
+
+.n34-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  background: #8c52ff;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  color: #000;
+}
+
+.n34-th {
+  background: #6a2bd9;
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 8px;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.n34-td {
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.3);
+  vertical-align: top;
+  font-weight: 400;
+}
+
+.n34-td-titulo {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.n34-quote-card {
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+  width: 89%;
+  background: #99daff;
+  border: 2px solid #5533cc;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.n34-qc-mark {
+  font-family: Georgia, serif;
+  font-size: 72px;
+  color: #e91e8c;
+  line-height: 0.6;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.n34-qc-body {
+  font-family: 'Ruda', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.n34-qc-autor {
+  font-family: 'Ruda', sans-serif;
+  font-size: 14px;
+  color: #e91e8c;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.n34-qc-obra {
+  font-family: 'Clear Sans', 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #5533cc;
+  margin: 0;
+}
+
+// ── Nodo 3.5 — 7 contenedores ──────────────────────────────────────────────
+
+// C1 — Santa Cruz
+.n35-c1 { position: absolute; top: 2%; left: 7%; width: 30%; background: #ea3aa8; border-radius: 10px; padding: 10px 12px; }
+.n35-c1-texto { font-family: 'Ruda', sans-serif; font-size: 14px; color: #fff; margin: 0; line-height: 1.5; font-weight: 400; }
+.n35-c1-autor { font-weight: 700; color: #5533cc; }
+
+// C2 — Jiles
+.n35-c2 { position: absolute; top: 2%; left: 64%; width: 30%; background: #7c41f8; border-radius: 10px; padding: 10px 12px; }
+.n35-c2-texto { font-family: 'Ruda', sans-serif; font-size: 16px; color: #fff; margin: 0; line-height: 1.5; font-weight: 400; }
+.n35-c2-autor { font-weight: 700; color: #000; }
+
+// C3 — Martínez
+.n35-c3 { position: absolute; top: 22%; left: 40%; width: 32%; background: #ffde59; border-radius: 10px; padding: 10px 12px; }
+.n35-c3-texto { font-family: 'Ruda', sans-serif; font-size: 15px; color: #e91e8c; margin: 0; line-height: 1.5; font-weight: 400; }
+.n35-c3-autor { font-weight: 700; }
+
+// C4 — Conceptos clave
+.n35-c4 { position: absolute; top: 48%; left: 2%; width: 46%; background: #ff3131; border-radius: 10px; padding: 10px 12px; }
+.n35-c4-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: #000; font-weight: 700; margin: 0 0 4px; }
+.n35-c4-lista { font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: #000; margin: 0; padding-left: 16px; line-height: 1.6; }
+
+// C5 — Principios éticos
+.n35-c5 { position: absolute; top: 52%; left: 51%; width: 47%; background: #a2c333; border-radius: 10px; padding: 10px 12px; }
+.n35-c5-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: #000; font-weight: 700; margin: 0 0 4px; }
+.n35-c5-lista { font-family: 'Bebas Neue', sans-serif; font-size: 15px; color: #000; margin: 0; padding-left: 16px; line-height: 1.6; }
+
+// C6 — Infraestructura editorial
+.n35-c6 { position: absolute; top: 77%; left: 2%; width: 96%; background: #fff; border-radius: 10px; padding: 10px 14px; }
+.n35-c6-texto { font-family: 'Horizon', sans-serif; font-size: 14px; color: #e91e8c; font-weight: 700; margin: 0; line-height: 1.6; }
+
+// C7 — Conclusión
+.n35-c7 { position: absolute; top: 88%; left: 2%; width: 96%; background: #004571; border-radius: 10px; padding: 10px 14px; }
+.n35-c7-texto { font-family: 'Horizon', sans-serif; font-size: 12px; color: #fff; font-weight: 700; margin: 0; line-height: 1.6; }
