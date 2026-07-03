@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-<app-book prevRoute="/nodo-3" nextRoute="/nodo-4">
-
-  <!-- ═══ P1 (2.1) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P2 (2.2) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P3 (2.3) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P4 (2.4) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P5 (2.5) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P6 (2.6) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P7 (2.7) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P8 (2.8) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P9 (2.9) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P10 (2.10) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P11 (2.11) ═══ -->
-  <div class="page n2" data-density="hard">
-  </div>
-
-  <!-- ═══ P12 (2.12) ═══ -->
-  <div class="page n2" data-density="hard">
-=======
 <app-book prevRoute="/nodo-2" nextRoute="/nodo-4">
 
   <!-- ═══ P1 (3.1) ═══ -->
@@ -55,19 +5,28 @@
     <p class="n31-titulo">¿La televisión chismosa es legal y ética?</p>
     <p class="n31-subtitulo">Lo legal no siempre es ético</p>
     <img src="assets/images/cntv.png" class="n31-cntv-img" alt="">
-    <div class="n31-circulo">
+    
+    <!-- Círculo Ricoeur -->
+    <div class="n31-circulo" (click)="openPopup('ricoeur')" style="cursor: pointer;" title="Ver detalle de Ricoeur">
       <p class="n31-circulo-destacado">Antes de preguntar si interesa...<br>pregunta si respeta a la persona.</p>
       <p class="n31-circulo-cita">"La ética consiste en vivir con y para los otros, en instituciones justas."<br>— Paul Ricoeur</p>
     </div>
-    <div class="n31-quote-card">
+    
+    <!-- Tarjeta Kant -->
+    <div class="n31-quote-card" (click)="openPopup('kant')" style="cursor: pointer;" title="Ver detalle de Kant">
       <span class="n31-qc-mark">"</span>
       <p class="n31-qc-body">"La humanidad debe ser tratada siempre como un fin y nunca únicamente como un medio."</p>
       <p class="n31-qc-autor">Immanuel Kant</p>
       <p class="n31-qc-obra">Filósofo Prusiano</p>
     </div>
+    
     <img src="assets/images/flames.png" class="n31-flames-img" alt="">
     <img src="assets/images/caron.png" class="n31-caron-img" alt="">
-    <p class="n31-stingo-texto">el abogado <span class="n31-stingo-nombre">Daniel Stingo</span> explica que, por regla general, la justicia chilena no puede impedir una publicación antes de que esta sea difundida, ya que esto podría considerarse censura previa. Es por esto, que las acciones civiles o penales suelen presentarse cuando el contenido ya fue emitido y el daño ya se produjo. En ese momento, es cuando le corresponde a un juez determinar si existe una vulneración, un delito o un perjuicio que deba ser reparado.</p>
+    
+    <!-- Texto Stingo -->
+    <p class="n31-stingo-texto" (click)="openPopup('stingo')" style="cursor: pointer;" title="Ver explicación legal">
+      el abogado <span class="n31-stingo-nombre">Daniel Stingo</span> explica que, por regla general, la justicia chilena no puede impedir una publicación antes de que esta sea difundida, ya que esto podría considerarse censura previa. Es por esto, que las acciones civiles o penales suelen presentarse cuando el contenido ya fue emitido y el daño ya se produjo. En ese momento, es cuando le corresponde a un juez determinar si existe una vulneración, un delito o un perjuicio que deba ser reparado.
+    </p>
   </div>
 
   <!-- ═══ P2 (3.2) ═══ -->
@@ -79,8 +38,7 @@
       <span class="n32-lc1-texto">Ley N°<span class="n32-lc1-num">1838</span>,<br>modificada por la Ley N°<span class="n32-lc1-num">20.750</span>.</span>
     </div>
     <div class="n32-ley-card n32-ley-card--2">
-      <span class="n32-lc2-titulo">Rol del cntv
-</span><br>
+      <span class="n32-lc2-titulo">Rol del cntv</span><br>
       <span class="n32-lc2-texto">Velar por el correcto funcionamiento de la televisión y garantizar el cumplimiento de principios fundamentales</span>
     </div>
     <div class="n32-ley-card n32-ley-card--3">
@@ -109,7 +67,12 @@
   <div class="page n3" data-density="hard">
     <img src="assets/images/parcito.png" class="n33-parcito-img" alt="">
     <p class="n33-texto2">Este caso coincide con lo explicado por Stingo, la libertad de expresión permite que el contenido se difunda sin censura previa, pero no elimina la responsabilidad posterior cuando esta afecta los derechos de terceros. Además, al involucrar a un menor de edad, la exposición adquiere una mayor gravedad, ya que su protección jurídica es mayor, independiente de la exposición de sus padres.</p>
-    <p class="n33-texto">Stingo señala que existe una excepción. Si una persona sabe que se publicará información que considere privada, puede presentar un recurso de protección ante la Corte de Apelaciones y solicitar que se detenga su difusión. Esta acción puede fundarse en una posible vulneración de la honra, la intimidad o la vida privada, pero requiere que la amenaza sea conocida antes de que el contenido llegue al público.<br><br>Un caso reciente que demuestra esta tensión ocurre tras los comentarios del periodista <span class="n33-dest">Sergio Rojas</span> acerca del <span class="n33-dest">hijo de Rafael Araneda y Marcela Vacarezza</span>, en el programa <span class="n33-dest">Que te lo digo</span>. El conductor cuestionó públicamente las motivaciones de la pareja de adoptar un niño de raza negra y la exposición en redes sociales. La <span class="n33-dest">Defensoría de la Niñez</span> denunció el episodio ante el CNTV y el <span class="n33-dest">Consejo de Ética de los medios</span>, al considerar que podía vulnerar su dignidad, vida privada, honra e identidad. La familia inició una acción penal por injurias, que concluyó en abril del 2026 a través de disculpas públicas y una donación a una fundación infantil.</p>
+    <p class="n33-texto">
+      Stingo señala que existe una excepción. Si una persona sabe que se publicará información que considere privada, puede presentar un recurso de protección ante la Corte de Apelaciones y solicitar que se detenga su difusión. Esta acción puede fundarse en una posible vulneración de la honra, la intimidad o la vida privada, pero requiere que la amenaza sea conocida antes de que el contenido llegue al público.<br><br>
+      Un caso reciente que demuestra esta tensión ocurre tras los comentarios del periodista 
+      <!-- Caso Sergio Rojas -->
+      <span class="n33-dest" (click)="openPopup('rojas')" style="cursor: pointer; text-decoration: underline;" title="Ver detalles del caso">Sergio Rojas</span> acerca del <span class="n33-dest">hijo de Rafael Araneda y Marcela Vacarezza</span>, en el programa <span class="n33-dest">Que te lo digo</span>. El conductor cuestionó públicamente las motivaciones de la pareja de adoptar un niño de raza negra y la exposición en redes sociales. La <span class="n33-dest">Defensoría de la Niñez</span> denunció el episodio ante el CNTV y el <span class="n33-dest">Consejo de Ética de los medios</span>, al considerar que podía vulnerar su dignidad, vida privada, honra e identidad. La familia inició una acción penal por injurias, que concluyó en abril del 2026 a través de disculpas públicas y una donación a una fundación infantil.
+    </p>
   </div>
 
   <!-- ═══ P4 (3.4) ═══ -->
@@ -163,23 +126,15 @@
 
   <!-- ═══ P5 (3.5) ═══ -->
   <div class="page n3" data-density="hard">
-
-    <!-- C1 — Santa Cruz -->
     <div class="n35-c1">
       <p class="n35-c1-texto">"El opinólogo es la encarnación del sentido común. Su reconocimiento no proviene de conocimientos especializados, sino de su capacidad de opinar desde una posición cercana."<br><span class="n35-c1-autor">SANTA CRUZ</span></p>
     </div>
-
-    <!-- C2 — Jiles -->
     <div class="n35-c2">
       <p class="n35-c2-texto">"La irrupción de los opinólogos permitió integrar voces más cercanas a la audiencia."<br><span class="n35-c2-autor">JILES</span></p>
     </div>
-
-    <!-- C3 — Martínez -->
     <div class="n35-c3">
       <p class="n35-c3-texto">"No es lo mismo ser periodista, comunicador u opinólogo. Manejar los códigos de televisión no garantiza preparación periodística ni herramientas éticas."<br><span class="n35-c3-autor">MARTÍNEZ</span></p>
     </div>
-
-    <!-- C4 — Conceptos clave -->
     <div class="n35-c4">
       <p class="n35-c4-titulo">CONCEPTOS CLAVE</p>
       <ul class="n35-c4-lista">
@@ -189,8 +144,6 @@
         <li>Cercanía con la audiencia ≠ exención ética</li>
       </ul>
     </div>
-
-    <!-- C5 — Principios éticos -->
     <div class="n35-c5">
       <p class="n35-c5-titulo">PRINCIPIOS ÉTICOS</p>
       <ul class="n35-c5-lista">
@@ -201,46 +154,126 @@
         <li>La responsabilidad ética comienza ANTES de la emisión</li>
       </ul>
     </div>
-
-    <!-- C6 — Infraestructura editorial -->
     <div class="n35-c6">
       <p class="n35-c6-texto">INFRAESTRUCTURA EDITORIAL<br>Opinólogos + Editores + Líneas Editoriales = Decisión Televisiva Amplia</p>
     </div>
-
-    <!-- C7 — Conclusión -->
     <div class="n35-c7">
       <p class="n35-c7-texto">EL PROBLEMA NO ESTÁ SOLO EN LO QUE SE DICE, SINO EN QUIÉN LO DICE, CON QUÉ INFORMACIÓN Y BAJO QUÉ RESPONSABILIDAD.</p>
     </div>
-
   </div>
 
   <!-- ═══ P6 (3.6) ═══ -->
   <div class="page n3" data-density="hard">
+    
+    <!-- Valor Monetario -->
+    <div class="n36-recuadro-rosado" (click)="openPopup('valor')" style="cursor: pointer; padding: 10px; border: 2px solid pink; margin-bottom: 10px;" title="Cita Carolina Martínez">
+      <p><strong>Valor Monetario vs. Valor Periodístico</strong></p>
+      <p>Haz clic para leer sobre la cita de Carolina Martínez.</p>
+    </div>
+
+    <!-- Protección Jurídica Fragmentada -->
+    <div class="n36-forma-verde" (click)="openPopup('juridica')" style="cursor: pointer; padding: 10px; border: 2px solid green; margin-bottom: 10px;">
+      <p><strong>Protección Jurídica Fragmentada</strong></p>
+    </div>
+
+    <!-- Ley 21.719 -->
+    <div class="n36-destello-azul" (click)="openPopup('ley21719')" style="cursor: pointer; padding: 10px; border: 2px solid blue; margin-bottom: 10px;">
+      <p><strong>✨ Ley N° 21.719 (24) ✨</strong></p>
+    </div>
+
+    <!-- El punto de no retorno / Límite ético -->
+    <div class="n36-seccion-final">
+      <div class="n36-destello-amarillo" style="padding: 10px; border: 2px solid orange; margin-bottom: 10px;">
+        <p><strong>El punto de no retorno</strong></p>
+      </div>
+      <div class="n36-nota-gris" (click)="openPopup('limite_etico')" style="cursor: pointer; padding: 10px; background: #eee;">
+        <p><strong>El límite ético (Haz clic)</strong></p>
+      </div>
+    </div>
+    
   </div>
 
-  <!-- ═══ P7 (3.7) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P8 (3.8) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P9 (3.9) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P10 (3.10) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P11 (3.11) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P12 (3.12) ═══ -->
-  <div class="page n3" data-density="hard">
->>>>>>> main
-  </div>
+  <!-- ═══ P7 a P12 (3.7 a 3.12) ═══ -->
+  <div class="page n3" data-density="hard"></div>
+  <div class="page n3" data-density="hard"></div>
+  <div class="page n3" data-density="hard"></div>
+  <div class="page n3" data-density="hard"></div>
+  <div class="page n3" data-density="hard"></div>
+  <div class="page n3" data-density="hard"></div>
 
 </app-book>
+
+<!-- 🚨 MODAL OVERLAY (FUERA DEL LIBRO PARA QUE SE VEA BIEN) 🚨 -->
+@if (activePopup() !== null) {
+  <div class="popup-overlay" (click)="closePopup()" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); display: flex; justify-content: center; align-items: center; z-index: 99999;">
+    
+    <div class="popup-content" (click)="$event.stopPropagation()" style="background: white; padding: 30px; border-radius: 12px; max-width: 500px; position: relative; font-family: sans-serif; color: #333;">
+      <button class="popup-close-btn" (click)="closePopup()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 20px; cursor: pointer;">✖</button>
+
+      <!-- KANT -->
+      @if (activePopup() === 'kant') {
+        <div class="popup-body">
+          <h3 style="color: #e50050; margin-top: 0;">Immanuel Kant y la Dignidad</h3>
+          <p style="line-height: 1.6;">De acuerdo a Kant, utilizar la vida íntima de una persona únicamente como un "medio" para generar rating o ingresos publicitarios, vulnera su condición fundamental humana. La persona deja de ser el "fin" en sí mismo para convertirse en un objeto comercial dentro de la televisión.</p>
+        </div>
+      }
+
+      <!-- STINGO -->
+      @if (activePopup() === 'stingo') {
+        <div class="popup-body">
+          <h3 style="color: #e50050; margin-top: 0;">Daniel Stingo: Censura y Daño</h3>
+          <p style="line-height: 1.6;">El Artículo 19 N° 4 de la Constitución protege la vida privada y la honra. Sin embargo, como en Chile no existe censura previa, la acción protectora debe ocurrir cuando la persona <em>sabe con anticipación</em> que se emitirá contenido privado. De lo contrario, las acciones (penales o civiles) solo reparan el daño una vez que ya fue emitido y propagado.</p>
+        </div>
+      }
+
+      <!-- RICOEUR -->
+      @if (activePopup() === 'ricoeur') {
+        <div class="popup-body">
+          <h3 style="color: #e50050; margin-top: 0;">Paul Ricoeur: Sí mismo como otro</h3>
+          <p style="line-height: 1.6;">La perspectiva de Ricoeur nos obliga a evaluar nuestras acciones considerando siempre la vulnerabilidad del otro. En la televisión chismosa, esto exige que el panelista empatice con el afectado y su entorno antes de emitir un juicio que tendrá alcance nacional.</p>
+        </div>
+      }
+
+      <!-- CASO SERGIO ROJAS -->
+      @if (activePopup() === 'rojas') {
+        <div class="popup-body">
+          <h3 style="color: #e50050; margin-top: 0;">Análisis: Caso Sergio Rojas</h3>
+          <p style="line-height: 1.6;">Involucrar a un menor de edad en el debate de la prensa rosa vulnera los derechos superiores del niño de manera grave. Este caso concluyó con acciones legales y demostró que la responsabilidad del comunicador es ineludible cuando afecta la intimidad, honra e identidad de un niño, independiente de la exposición previa que hagan sus padres.</p>
+        </div>
+      }
+
+      <!-- VALOR MONETARIO -->
+      @if (activePopup() === 'valor') {
+        <div class="popup-body">
+          <h3 style="color: #e50050; margin-top: 0;">Valor Monetario vs. Valor Periodístico</h3>
+          <p style="line-height: 1.6;">Como plantea Carolina Martínez, el área comercial y la búsqueda de rating a menudo compiten directamente con el valor ético y periodístico de la información, priorizando la rentabilidad (el morbo) por encima de la responsabilidad hacia los sujetos expuestos.</p>
+        </div>
+      }
+
+      <!-- PROTECCIÓN JURÍDICA -->
+      @if (activePopup() === 'juridica') {
+        <div class="popup-body">
+          <h3 style="color: #e50050; margin-top: 0;">Protección Jurídica Fragmentada</h3>
+          <p style="line-height: 1.6;">En nuestro marco legal, la protección de la intimidad se encuentra dispersa, lo que deja múltiples vacíos que la televisión de entretenimiento aprovecha sistemáticamente para bordear el límite legal sin cruzar al delito evidente.</p>
+        </div>
+      }
+
+      <!-- LEY 21.719 -->
+      @if (activePopup() === 'ley21719') {
+        <div class="popup-body">
+          <h3 style="color: #e50050; margin-top: 0;">Nueva Ley N° 21.719</h3>
+          <p style="line-height: 1.6;">Publicada en 2024, es la nueva ley de protección de datos personales. Su entrada en vigencia total será en diciembre de 2026, lo que obligará a los medios de comunicación a aplicar criterios mucho más estrictos sobre cómo manipulan y exponen datos o información de carácter privado.</p>
+        </div>
+      }
+
+      <!-- LÍMITE ÉTICO -->
+      @if (activePopup() === 'limite_etico') {
+        <div class="popup-body">
+          <h3 style="color: #e50050; margin-top: 0;">El Límite Ético en la Decisión Editorial</h3>
+          <p style="line-height: 1.6;">Alcanzado el "punto de no retorno" (la emisión en pantalla), ninguna disculpa borra el registro digital ni el daño provocado. Por eso, el límite ético principal debe recaer en la decisión editorial previa a la emisión, evaluando las consecuencias humanas antes de encender la cámara.</p>
+        </div>
+      }
+
+    </div>
+  </div>
+}
