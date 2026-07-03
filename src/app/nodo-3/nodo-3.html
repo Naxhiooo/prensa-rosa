@@ -4,62 +4,185 @@
   <div class="page n3" data-density="hard">
     <p class="n31-titulo">¿La televisión chismosa es legal y ética?</p>
     <p class="n31-subtitulo">Lo legal no siempre es ético</p>
-    <img src="assets/images/cntv.png" class="n31-cntv-img" alt="">
-    <div class="n31-circulo">
+    <img src="assets/images/cntv.png" class="n31-cntv-img" (click)="openModalCntv()" style="cursor:pointer" alt="">
+    
+    <!-- Círculo Ricoeur -->
+    <div class="n31-circulo" (click)="openModalRicoeur()" style="cursor:pointer">
       <p class="n31-circulo-destacado">Antes de preguntar si interesa...<br>pregunta si respeta a la persona.</p>
       <p class="n31-circulo-cita">"La ética consiste en vivir con y para los otros, en instituciones justas."<br>— Paul Ricoeur</p>
     </div>
-    <div class="n31-quote-card">
+    
+    <!-- Tarjeta Kant -->
+    <div class="n31-quote-card" (click)="openModalKant()" style="cursor:pointer">
       <span class="n31-qc-mark">"</span>
       <p class="n31-qc-body">"La humanidad debe ser tratada siempre como un fin y nunca únicamente como un medio."</p>
       <p class="n31-qc-autor">Immanuel Kant</p>
       <p class="n31-qc-obra">Filósofo Prusiano</p>
     </div>
+    
     <img src="assets/images/flames.png" class="n31-flames-img" alt="">
+    <img src="assets/images/caron.png" class="n31-caron-img" alt="">
+    
+    <!-- Texto Stingo -->
+    <p class="n31-stingo-texto" (click)="openModalStingo()" style="cursor:pointer">
+      el abogado <span class="n31-stingo-nombre">Daniel Stingo</span> explica que, por regla general, la justicia chilena no puede impedir una publicación antes de que esta sea difundida, ya que esto podría considerarse censura previa. Es por esto, que las acciones civiles o penales suelen presentarse cuando el contenido ya fue emitido y el daño ya se produjo. En ese momento, es cuando le corresponde a un juez determinar si existe una vulneración, un delito o un perjuicio que deba ser reparado.
+    </p>
   </div>
 
   <!-- ═══ P2 (3.2) ═══ -->
   <div class="page n3" data-density="hard">
+    <img src="assets/images/codigo-etica.png" class="n32-codigo-img" (click)="openModalCodigo()" style="cursor:pointer" alt="">
+    <img src="assets/images/marco-legal.png" class="n32-marco-img" (click)="openModalMarco()" style="cursor:pointer" alt="">
+    <div class="n32-ley-card n32-ley-card--1">
+      <span class="n32-lc1-titulo">ley</span><br>
+      <span class="n32-lc1-texto">Ley N°<span class="n32-lc1-num">1838</span>,<br>modificada por la Ley N°<span class="n32-lc1-num">20.750</span>.</span>
+    </div>
+    <div class="n32-ley-card n32-ley-card--2">
+      <span class="n32-lc2-titulo">Rol del cntv</span><br>
+      <span class="n32-lc2-texto">Velar por el correcto funcionamiento de la televisión y garantizar el cumplimiento de principios fundamentales</span>
+    </div>
+    <div class="n32-ley-card n32-ley-card--3">
+      <span class="n32-lc3-titulo">principios que protege</span><br>
+      <ul class="n32-lc3-lista">
+        <li>Democracia y paz</li>
+        <li>Protección de la familia</li>
+        <li>Dignidad humana</li>
+        <li>Derechos fundamentales reconocidos por la Constitución</li>
+      </ul>
+    </div>
+    <div class="n32-ley-card n32-ley-card--4">
+      <span class="n32-lc4-titulo">Alcance de la normativa</span><br>
+      <span class="n32-lc4-texto">Permite fiscalizar y sancionar diversos abusos en la programación televisiva</span>
+    </div>
+    <div class="n32-ley-card n32-ley-card--5">
+      <span class="n32-lc5-titulo">limitación</span><br>
+      <span class="n32-lc5-texto">No regula de manera específica los conflictos éticos y legales que surgen cuando la prensa rosa transfoma experiencias polémicas o privadas en contenido.</span>
+    </div>
+    <div class="n32-ley-card n32-ley-card--6">
+      <span class="n32-lc6-texto"><span class="n32-lc6-morado">la protección de la vida privada</span> también está reconocida en el artículo 19 número 4 <span class="n32-lc6-rosado">de la constitución</span>.</span>
+    </div>
   </div>
 
   <!-- ═══ P3 (3.3) ═══ -->
   <div class="page n3" data-density="hard">
+    <img src="assets/images/parcito.png" class="n33-parcito-img" alt="">
+    <p class="n33-texto2" (click)="openModalMenor()" style="cursor:pointer">Este caso coincide con lo explicado por Stingo, la libertad de expresión permite que el contenido se difunda sin censura previa, pero no elimina la responsabilidad posterior cuando esta afecta los derechos de terceros. Además, al involucrar a un menor de edad, la exposición adquiere una mayor gravedad, ya que su protección jurídica es mayor, independiente de la exposición de sus padres.</p>
+    <p class="n33-texto" (click)="openModalStingoExc()" style="cursor:pointer">
+      Stingo señala que existe una excepción. Si una persona sabe que se publicará información que considere privada, puede presentar un recurso de protección ante la Corte de Apelaciones y solicitar que se detenga su difusión. Esta acción puede fundarse en una posible vulneración de la honra, la intimidad o la vida privada, pero requiere que la amenaza sea conocida antes de que el contenido llegue al público.<br><br>
+      Un caso reciente que demuestra esta tensión ocurre tras los comentarios del periodista 
+      <!-- Caso Sergio Rojas -->
+      <span class="n33-dest" (click)="openModalRojas()" style="cursor:pointer">Sergio Rojas</span> acerca del <span class="n33-dest">hijo de Rafael Araneda y Marcela Vacarezza</span>, en el programa <span class="n33-dest">Que te lo digo</span>. El conductor cuestionó públicamente las motivaciones de la pareja de adoptar un niño de raza negra y la exposición en redes sociales. La <span class="n33-dest">Defensoría de la Niñez</span> denunció el episodio ante el CNTV y el <span class="n33-dest">Consejo de Ética de los medios</span>, al considerar que podía vulnerar su dignidad, vida privada, honra e identidad. La familia inició una acción penal por injurias, que concluyó en abril del 2026 a través de disculpas públicas y una donación a una fundación infantil.
+    </p>
   </div>
 
   <!-- ═══ P4 (3.4) ═══ -->
   <div class="page n3" data-density="hard">
+    <img src="assets/images/mujer.png" class="n34-mujer-img" alt="">
+    <div class="n34-quote-card">
+      <span class="n34-qc-mark">"</span>
+      <p class="n34-qc-body">"La humanidad debe ser tratada siempre como un fin y nunca únicamente como un medio." La responsabilidad no desaparece porque el contenido se presente como opinión o entretenimiento. El rostro es quien debe considerar que sus palabras pueden instalar sospechas, ampliar una exposición y afectar a personas cuyo estado emocional desconoce. Por ello, la obligación del comunicador no se limita a evitar afirmaciones falsas, sino que también exige evaluar las consecuencias humanas de aquello que decide difundir.</p>
+      <p class="n34-qc-autor">Carolina Martínez</p>
+      <p class="n34-qc-obra">Conductora de radio y televisión</p>
+    </div>
+    <div class="n34-tbl-wrap" (click)="openModalInteres()" style="cursor:pointer">
+      <table class="n34-tbl">
+        <thead>
+          <tr>
+            <th class="n34-th">Criterio</th>
+            <th class="n34-th">Información de Relevancia Pública (Interés Público)</th>
+            <th class="n34-th">Contenido de Entretenimiento / Prensa Rosa (Interés del Público)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="n34-td n34-td-titulo">Definición Central</td>
+            <td class="n34-td">Información útil para la sociedad que afecta o incide en el desarrollo de los asuntos públicos y democráticos.</td>
+            <td class="n34-td">Contenido que busca atraer audiencia, generar <em>rating</em> o servir como tema de conversación informal.</td>
+          </tr>
+          <tr>
+            <td class="n34-td n34-td-titulo">Justificación Legal y Ética</td>
+            <td class="n34-td">La difusión está completamente justificada porque prevalece la libertad de información para el bien común.</td>
+            <td class="n34-td"><strong>No se justifica</strong> la exposición de la intimidad; el morbo o la curiosidad no superan el derecho a la honra.</td>
+          </tr>
+          <tr>
+            <td class="n34-td n34-td-titulo">Foco de Atención</td>
+            <td class="n34-td">Conductas de relevancia social, decisiones políticas, actos de funcionarios públicos o hechos que impactan a la comunidad.</td>
+            <td class="n34-td">Relaciones familiares, procesos de adopción, rupturas amorosas y situaciones estrictamente personales.</td>
+          </tr>
+          <tr>
+            <td class="n34-td n34-td-titulo">Criterio de Validación</td>
+            <td class="n34-td"><strong>Utilidad social:</strong> ¿Aporta esta información al debate público o a la fiscalización del poder?</td>
+            <td class="n34-td"><strong>Comercial / Entretenimiento:</strong> ¿Genera clics, interacciones o conversación en la audiencia?</td>
+          </tr>
+          <tr>
+            <td class="n34-td n34-td-titulo">Límite de la Privacidad</td>
+            <td class="n34-td">Se reduce legítimamente en la medida en que la conducta del individuo afecte el ámbito público.</td>
+            <td class="n34-td">Intocable. La vida privada y la honra deben protegerse frente al escrutinio masivo no justificado.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <!-- ═══ P5 (3.5) ═══ -->
   <div class="page n3" data-density="hard">
+    <div class="n35-c1" (click)="openModalOpinolgo()" style="cursor:pointer">
+      <p class="n35-c1-texto">"El opinólogo es la encarnación del sentido común. Su reconocimiento no proviene de conocimientos especializados, sino de su capacidad de opinar desde una posición cercana."<br><span class="n35-c1-autor">SANTA CRUZ</span></p>
+    </div>
+    <div class="n35-c2">
+      <p class="n35-c2-texto">"La irrupción de los opinólogos permitió integrar voces más cercanas a la audiencia."<br><span class="n35-c2-autor">JILES</span></p>
+    </div>
+    <div class="n35-c3">
+      <p class="n35-c3-texto">"No es lo mismo ser periodista, comunicador u opinólogo. Manejar los códigos de televisión no garantiza preparación periodística ni herramientas éticas."<br><span class="n35-c3-autor">MARTÍNEZ</span></p>
+    </div>
+    <div class="n35-c4">
+      <p class="n35-c4-titulo">CONCEPTOS CLAVE</p>
+      <ul class="n35-c4-lista">
+        <li>Periodista ≠ Comunicador ≠ Opinólogo</li>
+        <li>Legitimidad televisiva vs. formación ética</li>
+        <li>Opinión personal ≠ responsabilidad editorial</li>
+        <li>Cercanía con la audiencia ≠ exención ética</li>
+      </ul>
+    </div>
+    <div class="n35-c5" (click)="openModalPrincipios()" style="cursor:pointer">
+      <p class="n35-c5-titulo">PRINCIPIOS ÉTICOS</p>
+      <ul class="n35-c5-lista">
+        <li>Consentimiento protege la autonomía pero es imperfecto</li>
+        <li>Ser recordado ≠ perder la honra o dignidad</li>
+        <li>Evaluar interés público antes de difundir</li>
+        <li>La difusión es una decisión televisiva amplia</li>
+        <li>La responsabilidad ética comienza ANTES de la emisión</li>
+      </ul>
+    </div>
+    <div class="n35-c6" (click)="openModalInfra()" style="cursor:pointer">
+      <p class="n35-c6-texto">INFRAESTRUCTURA EDITORIAL<br>Opinólogos + Editores + Líneas Editoriales = Decisión Televisiva Amplia</p>
+    </div>
+    <div class="n35-c7">
+      <p class="n35-c7-texto">EL PROBLEMA NO ESTÁ SOLO EN LO QUE SE DICE, SINO EN QUIÉN LO DICE, CON QUÉ INFORMACIÓN Y BAJO QUÉ RESPONSABILIDAD.</p>
+    </div>
   </div>
 
   <!-- ═══ P6 (3.6) ═══ -->
   <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P7 (3.7) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P8 (3.8) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P9 (3.9) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P10 (3.10) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P11 (3.11) ═══ -->
-  <div class="page n3" data-density="hard">
-  </div>
-
-  <!-- ═══ P12 (3.12) ═══ -->
-  <div class="page n3" data-density="hard">
+    <img src="assets/images/vs-privacidad.png" class="n36-vsprivacidad-img" alt="">
   </div>
 
 </app-book>
+
+<app-modal [open]="modalCntvOpen()"        [content]="modalCntvContent"        (closed)="closeModalCntv()"></app-modal>
+<app-modal [open]="modalCodigoOpen()"      [content]="modalCodigoContent"      (closed)="closeModalCodigo()"></app-modal>
+<app-modal [open]="modalMarcoOpen()"       [content]="modalMarcoContent"       (closed)="closeModalMarco()"></app-modal>
+<app-modal [open]="modalStingoExcOpen()"   [content]="modalStingoExcContent"   (closed)="closeModalStingoExc()"></app-modal>
+<app-modal [open]="modalMenorOpen()"       [content]="modalMenorContent"       (closed)="closeModalMenor()"></app-modal>
+<app-modal [open]="modalInteresOpen()"     [content]="modalInteresContent"     (closed)="closeModalInteres()"></app-modal>
+<app-modal [open]="modalOpinologoOpen()"   [content]="modalOpinologoContent"   (closed)="closeModalOpinolgo()"></app-modal>
+<app-modal [open]="modalInfraOpen()"       [content]="modalInfraContent"       (closed)="closeModalInfra()"></app-modal>
+<app-modal [open]="modalPrincipiosOpen()"  [content]="modalPrincipiosContent"  (closed)="closeModalPrincipios()"></app-modal>
+<app-modal [open]="modalKantOpen()"    [content]="modalKantContent"    (closed)="closeModalKant()"></app-modal>
+<app-modal [open]="modalStingoOpen()"  [content]="modalStingoContent"  (closed)="closeModalStingo()"></app-modal>
+<app-modal [open]="modalRicoeurOpen()" [content]="modalRicoeurContent" (closed)="closeModalRicoeur()"></app-modal>
+<app-modal [open]="modalRojasOpen()"   [content]="modalRojasContent"   (closed)="closeModalRojas()"></app-modal>
+<app-modal [open]="modalValorOpen()"   [content]="modalValorContent"   (closed)="closeModalValor()"></app-modal>
+<app-modal [open]="modalJuridicaOpen()" [content]="modalJuridicaContent" (closed)="closeModalJuridica()"></app-modal>
+<app-modal [open]="modalLeyOpen()"     [content]="modalLeyContent"     (closed)="closeModalLey()"></app-modal>
+<app-modal [open]="modalLimiteOpen()"  [content]="modalLimiteContent"  (closed)="closeModalLimite()"></app-modal>

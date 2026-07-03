@@ -45,7 +45,7 @@
 
   <!-- ═══ P2 (1.2) ═══ -->
   <div class="page n1" data-density="hard">
-    <img src="assets/images/parejalol.png" class="n1-pareja-p2" alt="">
+    <img src="assets/images/parejalol.png" class="n1-pareja-p2" alt="" (click)="openModalId0()" style="cursor:pointer">
     <p class="n1-p2-s n1-p2-s1">La intimidad, de acuerdo con la filósofa <span class="n1-p2-rosa">Julie C. Inness</span> en <span class="n1-p2-rosa">Privacy, Intimacy, and Isolation</span>, no se define únicamente por permanecer oculta, sino también por el peso emocional que tiene para quienes la viven.</p>
     <p class="n1-p2-s n1-p2-s2">Desde esta perspectiva la prensa rosa, y la televisión transformaron esa intimidad en una materia de visibilidad mediática.</p>
     <p class="n1-p2-s n1-p2-s3">En esa línea, el sociólogo <span class="n1-p2-rosa">John B. Thompson</span> denomina "nueva visibilidad" al modo en que los medios modifican las condiciones en que personas, acciones y acontecimientos se hacen públicos.</p>
@@ -55,7 +55,7 @@
       <span class="n1-dt-main">Detrás del titular, hay personas.</span>
       <span class="n1-dt-sub">La exposición tiene un <em>costo emocional.</em></span>
     </div>
-    <img src="assets/images/todo-muestra.png" class="n12-todo-muestra-img" alt="">
+    <img src="assets/images/todo-muestra.png" class="n12-todo-muestra-img" alt="" (click)="openModalId1()" style="cursor:pointer">
   </div>
 
   <!-- ═══ P3 (1.3) ═══ -->
@@ -170,7 +170,7 @@
       </div>
     </div>
 
-    <img src="assets/images/conflicto-formato.png" class="n16-conflicto-img" alt="">
+    <img src="assets/images/conflicto-formato.png" class="n16-conflicto-img" alt="" (click)="openModalId4()" style="cursor:pointer">
 
     <!-- Carrusel programas -->
     <div class="n16p-wrap">
@@ -192,7 +192,7 @@
       <iframe class="n17-video" src="https://www.youtube.com/embed/4g1Cqf8QUWk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="n17-texto">Sin embargo, este desplazamiento no significó la desaparición de los programas de prensa rosa. Mientras en la televisión abierta, (entendida, de acuerdo con el CNTV, como televisión de libre recepción transmitida mediante el uso del espectro radioeléctrico en una zona geográfica determinada) estos contenidos fueron reduciendo su presencia, en la televisión de pago siguieron existiendo espacios dedicados al espectáculo, el rumor y la vida privada de figuras públicas.<br><br>En TV+, por ejemplo, continuó Me Late, conducido por Daniel Fuenzalida, como un programa centrado en polémicas y conflictos del mundo del espectáculo; y en 2023, Sígueme retomó una línea similar bajo la conducción de Julia Vial.<br><br>Algo parecido ocurrió en Zona Latina, donde Zona de estrellas se mantuvo al aire como un espacio dedicado a la conversación farandulera, mientras que Que te lo digo, estrenada en 2024 con Sergio Rojas, Luis Sandoval y Paula Escobar, continuó trabajando sobre exclusivas, rumores y escándalos del espectáculo. En ese sentido, más que desaparecer, la prensa rosa dejó de ocupar el centro de la televisión abierta, pero siguió viva en espacios más específicos, dirigidos a una audiencia ya familiarizada con sus códigos y dispuesta a consumir ese tipo de contenido. En el mismo año, regresó Primer Plano en Chilevisión y hubo estrenos de nuevos espacios como Only Fama en Mega que insistieron que en este tipo de contenido sigue teniendo lugar en la televisión, pero ya no con el mismo carácter de los años 2000.</p>
-    <div class="n17-quote-card">
+    <div class="n17-quote-card" (click)="openModalId5()" style="cursor:pointer">
       <span class="n17-qc-mark">"</span>
       <p class="n17-qc-body">La televisión pierde el monopolio de la imagen y de mostrar, y de la definición de lo que son las personas</p>
       <br>
@@ -205,7 +205,7 @@
   <div class="page n1" data-density="hard">
     <img src="assets/images/nodo1/alerta-spoiler.png" class="n18-alerta-img" alt="">
     <img src="assets/images/tele1.png" class="n18-tele1-img" alt="">
-    <div class="n18-cuaderno">
+    <div class="n18-cuaderno" (click)="openModalId7()" style="cursor:pointer">
       <p class="n18-cuaderno-texto">
         <span class="n18-cuaderno-titulo">¿Criticar la farándula es lo mismo que hacerla?<br></span>
         <span class="n18-cuaderno-cuerpo">A veces opinar sobre la intimidad ajena es tan invasivo como exponerla.</span>
@@ -293,3 +293,9 @@
 </app-modal>
 
 <app-modal [open]="modal12Open()" [content]="modal12Content" (closed)="closeModal12()"></app-modal>
+
+<app-modal [open]="modalId0Open()" [content]="modalId0Content" (closed)="closeModalId0()"></app-modal>
+<app-modal [open]="modalId1Open()" [content]="modalId1Content" (closed)="closeModalId1()"></app-modal>
+<app-modal [open]="modalId4Open()" [content]="modalId4Content" (closed)="closeModalId4()"></app-modal>
+<app-modal [open]="modalId5Open()" [content]="modalId5Content" (closed)="closeModalId5()"></app-modal>
+<app-modal [open]="modalId7Open()" [content]="modalId7Content" (closed)="closeModalId7()"></app-modal>

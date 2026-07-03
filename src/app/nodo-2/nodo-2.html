@@ -4,7 +4,7 @@
   <div class="page n2" data-density="hard">
     <p class="n21-titulo">¿Por qué<br>se vende y compra<br>la <span class="n21-intimidad">intimidad</span>?</p>
     <img src="assets/images/truman.png" class="n21-truman-img" alt="">
-    <div class="n21-circulo">
+    <div class="n21-circulo" (click)="openModalId15()" style="cursor:pointer">
       <span class="n21-circulo-texto">¿Existir es suficiente hoy?<br>Para la tele, NO. Solo importas cuando te ven. Y si nadie te ve, mejor besa a alguien.</span>
     </div>
   </div>
@@ -131,11 +131,13 @@
       </div>
 
     </div>
+    <img src="assets/images/aaaa.png" class="n22-aaaa-img" alt="">
+    <img src="assets/images/yanose.png" class="n22-yanose-img" alt="">
   </div>
 
   <!-- ═══ P3 (2.3) ═══ -->
   <div class="page n2" data-density="hard">
-    <div class="n23-banner">
+    <div class="n23-banner" (click)="openModalId19()" style="cursor:pointer">
       <p class="n23-banner-texto">El reality no solo muestra comportamientos. También enseña cuáles son premiados.</p>
     </div>
     <img src="assets/images/dentro-reality.png" class="n23-dentro-img" alt="">
@@ -145,7 +147,7 @@
   <!-- ═══ P4 (2.4) ═══ -->
   <div class="page n2" data-density="hard">
     <img src="assets/images/atencion.png" class="n24-atencion-img" alt="">
-    <div class="n24-circulo">
+    <div class="n24-circulo" (click)="openModalId22()" style="cursor:pointer">
       <span class="n24-circulo-texto">¿Exponer tu vida es una decisión libre?<br>Sí. Dentro de un formato que ya decidió cuánto vale lo que vas a contar.</span>
     </div>
     <img src="assets/images/tele2.png" class="n24-tele2-img" alt="">
@@ -154,7 +156,7 @@
 
   <!-- ═══ P5 (2.5) ═══ -->
   <div class="page n2" data-density="hard">
-      <div class="n25-band">
+      <div class="n25-band" (click)="openModalId25()" style="cursor:pointer">
         <p class="n25-band-texto">La vulnerabilidad ajena dejó de incomodar. Hoy es entretenimiento legítimo.</p>
       </div>
       <img src="assets/images/claudio-varas.png" class="n25-claudio-img" alt="">
@@ -171,3 +173,8 @@
   </div>
 
 </app-book>
+
+<app-modal [open]="modalId15Open()" [content]="modalId15Content" (closed)="closeModalId15()"></app-modal>
+<app-modal [open]="modalId19Open()" [content]="modalId19Content" (closed)="closeModalId19()"></app-modal>
+<app-modal [open]="modalId22Open()" [content]="modalId22Content" (closed)="closeModalId22()"></app-modal>
+<app-modal [open]="modalId25Open()" [content]="modalId25Content" (closed)="closeModalId25()"></app-modal>
