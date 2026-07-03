@@ -3052,3 +3052,22 @@ html, body {
 // C7 — Conclusión
 .n35-c7 { position: absolute; top: 88%; left: 2%; width: 96%; background: #004571; border-radius: 10px; padding: 10px 14px; }
 .n35-c7-texto { font-family: 'Horizon', sans-serif; font-size: 12px; color: #fff; font-weight: 700; margin: 0; line-height: 1.6; }
+
+// ── Nodo 2.2 — imágenes extra ───────────────────────────────────────────────
+.n22-aaaa-img {
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto;
+}
+
+.n22-yanose-img {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: auto;
+}
